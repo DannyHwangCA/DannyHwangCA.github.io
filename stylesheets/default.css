@@ -58,14 +58,5 @@
 }
 
 a:hover {
-    color: #66b2ff;
+    color: #003299;   
 }
-
-a:active {
-    color:#66b2ff;
-}
-
-a:visited {
-    color:#66b2ff;
-}
-

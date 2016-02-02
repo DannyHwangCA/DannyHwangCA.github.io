@@ -55,5 +55,17 @@
     margin: auto;
     display:inline-block;
     padding: 5px
-  
 }
+
+a:hover {
+    color: #ffffcc;
+}
+
+a:active {
+    color:#ffe5ff;
+}
+
+a:visited {
+    color:#ffe5ff;
+}
+

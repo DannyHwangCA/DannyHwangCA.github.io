@@ -57,6 +57,14 @@
     padding: 5px
 }
 
+a:link {
+    color:#ffffff;
+}
+
+a:visited {
+    color:#aa80ff;
+}
+
 a:hover {
     color: #6697ff;   
 }

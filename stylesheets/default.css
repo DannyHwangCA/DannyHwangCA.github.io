@@ -1,17 +1,17 @@
 .header {
     Text-align:center;
     color:White;
-    Font-size: 30;
+    Font-size: 50;
     Font-family: Arial;
     background-color:#58D4FD;
-    margin: 5% 10% .1% 10%;
+    margin: auto 10% .1% 10%;
  
 }
 
 .nav {
     text-align:center;
     color:White;
-    font-size: 30;
+    font-size: 50;
     font-family: Arial;
     background-color:#86D7F2;
     margin: .1% 10% .1% 10%;
@@ -24,6 +24,10 @@
     height: 60%;
     width: 60%;
     float:left;
+    text-align:center;
+    color:White;
+    font-size: 50;
+    font-family: Arial;
 }
 
 .rightside {
@@ -32,7 +36,10 @@
     margin: 0 auto .1% 0;
     height: 60%;
     width: 19.9%;
-    
+    text-align:center;
+    color:White;
+    font-size: 50;
+    font-family: Arial;
 }
 
 .footer {

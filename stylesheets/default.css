@@ -4,7 +4,8 @@
     Font-size: 50;
     Font-family: Arial;
     background-color:#58D4FD;
-    margin: auto 10% .1% 10%;
+    margin: .1% 10% .1% 10%;
+    height: 20px;
  
 }
 
@@ -15,13 +16,14 @@
     font-family: Arial;
     background-color:#86D7F2;
     margin: .1% 10% .1% 10%;
+    height: 20px;
 }
     
     
 .leftside {
     background-color:#7DCCE7;
     margin: 0 .1% .1% 10%;
-    height: 60%;
+    height: 600px;
     width: 60%;
     float:left;
     text-align:center;
@@ -34,7 +36,7 @@
     background-color: #7DCCE7;
     float:left;
     margin: 0 auto .1% 0;
-    height: 60%;
+    height: 600px;
     width: 19.9%;
     text-align:center;
     color:White;

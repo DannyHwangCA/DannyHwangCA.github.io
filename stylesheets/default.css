@@ -68,8 +68,7 @@
 
 .welcomepicture {
     display: block;
-    margin: auto;
-    margin-top: 5%;
+    margin-top: 5% auto auto auto;
 }
 
 .rightside {

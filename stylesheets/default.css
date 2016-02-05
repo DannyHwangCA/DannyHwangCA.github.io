@@ -67,8 +67,8 @@
 }
 
 .welcomepicture {
-    float:left;
-    padding: 3% 0 0 10%;
+    display: block;
+    margin: auto;
 }
 
 .rightside {

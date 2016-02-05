@@ -48,6 +48,7 @@
 .welcomepicture {
     display: block;
     margin: 1.25% auto auto auto;
+    padding-top: 1.25%;
 }
 
 .rightside {

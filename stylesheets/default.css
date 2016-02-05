@@ -62,9 +62,9 @@
     font-family: Arial;
 }
 
-,mypicture {
+.mypicture {
     display:block;
-    margin: 2% auto auto auto;
+    margin: 1.25% auto auto auto;
 }
 
 .footer {

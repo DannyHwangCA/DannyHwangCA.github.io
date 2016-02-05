@@ -6,6 +6,7 @@
     background-color:#58D4FD;
     margin: 5% 10% .1% 10%;
     padding:10px;
+    font-weight: bold;
  
 }
 
@@ -63,6 +64,11 @@
     color:White;
     font-size: 30px;
     font-family: Arial;
+}
+
+.welcomepicture {
+    floart:left;
+    margin: .1% .1% .1% 10%;
 }
 
 .rightside {

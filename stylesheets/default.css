@@ -64,7 +64,7 @@
 
 ,mypicture {
     display:block;
-    margin: auto;
+    margin: 1.25% auto auto auto;
 }
 
 .footer {

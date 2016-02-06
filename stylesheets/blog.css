@@ -2,7 +2,7 @@
     background-color: #7DCCE7;
     float:left;
     margin: 0 .1% .1% 10%;
-    display: flex;
+    height: 1300px;
     width: 19.9%;
     font-family: Arial;
     
@@ -43,7 +43,7 @@
 .rightbar {
     background-color:#7DCCE7;
     margin: 0 auto .1% 0;
-    flex: auto;
+    height: 1300px;
     width: 60%;
     float: left;
     color:White;

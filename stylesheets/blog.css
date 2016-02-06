@@ -7,11 +7,13 @@
     color:White;
     font-size: 15px;
     font-family: Arial;
+    display: block;
 }
 
 .intropadding {
     margin: 10% 5% 10% 5%;
     padding: 5%;
+   
 }
 
 .articlepadding {

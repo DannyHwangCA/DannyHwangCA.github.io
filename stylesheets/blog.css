@@ -10,10 +10,12 @@
 }
 
 .intropadding {
+    margin: 10% 5% 10% 5%;
     padding: 5%;
 }
 
 .articlepadding {
+    margin: 0 5% 2.5% 5%;
     padding: 2%;
 }
 

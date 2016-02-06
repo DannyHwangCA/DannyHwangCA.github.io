@@ -8,6 +8,11 @@
     color:White;
     font-size: 30px;
     font-family: Arial;
+    padding: auto;
+}
+
+.intropadding {
+    padding: auto;
 }
 
 .rightbar {

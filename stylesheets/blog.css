@@ -14,7 +14,7 @@
     margin: 5% 5% 2.5% 2.5%;
     padding: 5%;
     display: block;
-    font-size: 100%;
+    font-weight: bold;
    
 }
 
@@ -36,5 +36,5 @@
 }
 
 .rightbartext{
-    padding: 5% 5% 5% 5%;
+    margin: 5% 5% 5% 5%;
 }

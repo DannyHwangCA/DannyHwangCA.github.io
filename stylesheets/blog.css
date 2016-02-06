@@ -4,7 +4,6 @@
     margin: 0 .1% .1% 10%;
     height: 600px;
     width: 19.9%;
-    text-align:center;
     color:White;
     font-size: 15px;
     font-family: Arial;
@@ -23,8 +22,7 @@
     margin: 0 auto .1% 0;
     height: 600px;
     width: 60%;
-    float:left;
-    text-align:center;
+    float: left;
     color:White;
     font-size: 30px;
     font-family: Arial;

@@ -7,18 +7,20 @@
     color:White;
     font-size: 15px;
     font-family: Arial;
-    display: block;
+    
 }
 
 .intropadding {
     margin: 10% 5% 10% 5%;
     padding: 5%;
+    display: block;
    
 }
 
 .articlepadding {
     margin: 0 5% 2.5% 5%;
     padding: 2%;
+    display: block;
 }
 
 .rightbar {

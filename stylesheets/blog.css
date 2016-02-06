@@ -11,7 +11,7 @@
 }
 
 .intropadding {
-    margin: 5% 5% 2.5% 3%;
+    margin: 5% 5% 2.5% 2.5%;
     padding: 5%;
     display: block;
     font-size: 100%;
@@ -36,5 +36,5 @@
 }
 
 .rightbartext{
-    margin: 5% 5% 5% 5%;
+    padding: 5% 5% 5% 5%;
 }

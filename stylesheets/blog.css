@@ -12,7 +12,6 @@
 
 .intropadding {
     margin: 5% 5% 2.5% 2.5%;
-    padding: 5%;
     display: block;
     font-weight: bold;
     background-color: #0089e6;
@@ -26,9 +25,15 @@
 
 .articlepadding {
     margin: 0 5% 1% 5%;
-    padding: 2%;
     display: block;
-    background-color: gray;
+    font-weight: bold;
+    background-color: #0089e6;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 3px 20px 0 rgba(0,0,0,0.19);
 }
 
 .rightbar {

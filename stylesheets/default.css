@@ -49,6 +49,8 @@
 .welcomepicture {
     display: block;
     margin: 1.25% auto auto auto;
+    width: auto;
+    height: auto;
 }
 
 .rightside {
@@ -66,6 +68,8 @@
 .mypicture {
     display:block;
     margin: 4.5% auto auto auto;
+    width: auto;
+    height: auto;
 }
 
 .footer {

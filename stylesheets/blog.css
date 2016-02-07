@@ -1,8 +1,8 @@
 .leftbar {
     background-color: #7DCCE7;
     float:left;
-    margin: 0 .1% .1% 10%;
-    height: 1300px;
+    margin: 0 .1% 5% 10%;
+    height: auto;
     width: 19.9%;
     font-family: Arial;
     
@@ -43,7 +43,7 @@
 .rightbar {
     background-color:#7DCCE7;
     margin: 0 auto .1% 0;
-    height: 1300px;
+    height: auto;
     width: 60%;
     float: left;
     color:White;

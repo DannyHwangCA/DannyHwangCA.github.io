@@ -37,7 +37,7 @@
 .leftside {
     background-color:#7DCCE7;
     margin: 0 .1% .1% 10%;
-    height: 600px;
+    height: auto;
     width: 60%;
     float:left;
     text-align:center;
@@ -57,7 +57,7 @@
     background-color: #7DCCE7;
     float:left;
     margin: 0 auto .1% 0;
-    height: 600px;
+    height: auto;
     width: 19.9%;
     text-align:center;
     color:White;

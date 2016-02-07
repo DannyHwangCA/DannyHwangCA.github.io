@@ -36,7 +36,7 @@
 
 .leftside {
     background-color:#7DCCE7;
-    margin: 0 .1% .1% 10%;
+    margin: 0 .1% 2% 10%;
     height: auto;
     width: 60%;
     float:left;
@@ -56,13 +56,14 @@
 .rightside {
     background-color: #7DCCE7;
     float:left;
-    margin: 0 auto .1% 0;
+    margin: 0 auto 2% 0;
     height: auto;
     width: 19.9%;
     text-align:center;
     color:White;
     font-size: 30px;
     font-family: Arial;
+    
 }
 
 .mypicture {

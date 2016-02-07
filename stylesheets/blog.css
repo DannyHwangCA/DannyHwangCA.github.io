@@ -2,11 +2,10 @@
     background-color: #7DCCE7;
     float:left;
     margin: 0 .1% auto 10%;
-    height: auto;
+    height: 125%;
     width: 19.9%;
     font-family: Arial;
-    padding: 0 0 10% 0;
-}
+ }
 
 .intropadding {
     margin: 5% 2.5% 2.5% 2.5%;

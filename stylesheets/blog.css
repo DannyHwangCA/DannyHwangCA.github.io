@@ -63,5 +63,6 @@
     padding:10px;
 }
 .code code {
-    font-size:0.9em;
+    font-size:20px;
+    font-color: black;
 }

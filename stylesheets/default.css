@@ -76,7 +76,7 @@
 .middlesection {
     background-color: #7DCCE7;
     float: left;
-    width: 100%;
+    margin: 0 25% 0 25%;
     height: auto;
     color: white;
     font-size: 30px;

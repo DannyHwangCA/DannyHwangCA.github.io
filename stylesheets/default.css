@@ -81,7 +81,13 @@
     font-size: 30px;
     font-family: Arial;
     text-align: center;
-    padding 5% 5% 5% 5%5;
+    
+}
+
+.contact_me_padding{
+    background-color: #8c8cd9;
+    margin auto;
+    padding: 10%;
 }
 
 .footer {

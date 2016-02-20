@@ -73,6 +73,18 @@
     max-height: 100%;
 }
 
+.middlesection {
+    background-color: #7DCCE7;
+    float: left;
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+    padding 10%;
+}
+
 .footer {
     background-color: #58D4FD;
     clear:both;

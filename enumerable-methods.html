@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog Page</title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/blog.css">
+
+<!-- Header Section -->
+	<body>
+	    <div class="header">
+	        Welcome To My Blog Page!
+	    </div>
+	    
+<!-- Header Section end -->
+
+<!-- Navigation Bar -->
+     	<div class="nav">
+	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
+                <a class="navbutton" href="#">Projects</a>  
+                <a class="navbutton" href="#">Resume</a>  
+                <a class="navbutton" href="http://dannyhwangca.github.io/blog.html">Blog</a>  
+                <a class="navbutton" href="#">About Me</a>  
+                <a class="navbutton" href="https://dannyhwangca.github.io/contact.html">Contact Me</a> 
+         </div>
+  
+  
+<!-- Navigation bar end -->
+
+<!-- left Blog Post Bar -->
+        <div class="leftbar"> 
+      <a class="intropadding" href="http://dannyhwangca.github.io/blog.html"> Intro Page </a>
+            <a class="articlepadding" href="http://dannyhwangca.github.io/git.html"> Post 1: Version Control & Git</a>
+            <a class="articlepadding" href="#"> Post 2: Css Concepts</a>
+	    <a class="articlepadding" href="http://dannyhwangca.github.io/arrays-hashes.html"> Post 3: Arrays Vs Hashes!</a>
+            <a class="articlepadding" href="#"> Post 4: Do Be Determined!</a>
+	</div>
+<!-- left Blog Post Bar end-->
+
+<!-- My picture Box (right)-->
+        <div class="rightbar"> 
+        
+                <div class="rightbartext">
+	<main>
+
+  
+<h3> The Importance of Ruby Map! </h3> 
+<br>
+This blog post is designed to review and understand one of ruby’s most important enumerable: map.
+<br>
+<h4> What is an enumerable ruby method? </h4>
+<br>
+To answer what map is, we need to first understand what an enumerable is. 
+<br><br>
+An enumerable is actually a pack of methods that ruby programmers thought were useful and packages them together with other objects. An enumerable was created so programmers do not have to continuously write a pack of methods they need to commonly use. 
+<br>
+<h4>So what does the “.map” Enumerable do for us? </h4>
+<br>
+The “,map” enumerable returns a new array that contains the output / results of running the block of code once over a given set of elements.
+<br><br>
+<b>Example</b> 
+<br>
+<div class="code">
+(1..4).map { |x| x * x }
+#=> [1,4,9,16]
+</div>
+<br><br>
+In the code above, “.map” returns an array containing the results of multiplying the range of integers inclusively between 1..4. 
+<br><br>
+Thus we get 1 * 1 = 1 as the first element in index(0). We get 2 * 2 = 4 as the 2nd elment in index (1). And, etc.
+<br><br>
+So, we use .map to create a new array based on the original array with the values modified by the block of code we gave it. In this case, the code was multiplying each element by itself.
+<br><br>
+So, “.map” is an effective way of easily running a desired code block over a specified array or hash and get a new array in return. 
+<br><br>
+This is useful if you want a non-destructive return of code!
+
+
+
+
+    	</main>
+                </div>
+        </div>        
+<!-- My picture Box (right) end-->
+
+<!-- Footer Section -->
+	<div class="footer">
+		<a href="https://www.facebook.com/" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/facebook.png?raw=true" alt="FaceBook!"></a>
+            	<a href="https://www.linkedin.com/in/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/linkin.png?raw=true" alt="LinkedIn"></a>
+            	<a href="https://github.com/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/git-icon.png?raw=true" alt="Github!"></a>
+	</div>
+<!-- End Footer Section -->
+
+
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog Page</title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/blog.css">
+
+<!-- Header Section -->
+	<body>
+	    <div class="header">
+	        Welcome To My Blog Page!
+	    </div>
+	    
+<!-- Header Section end -->
+
+<!-- Navigation Bar -->
+     	<div class="nav">
+	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
+                <a class="navbutton" href="#">Projects</a>  
+                <a class="navbutton" href="#">Resume</a>  
+                <a class="navbutton" href="http://dannyhwangca.github.io/blog.html">Blog</a>  
+                <a class="navbutton" href="https://dannyhwangca.github.io/about.html">About Me</a>  
+                <a class="navbutton" href="https://dannyhwangca.github.io/contact.html">Contact Me</a> 
+         </div>
+  
+  
+<!-- Navigation bar end -->
+
+<!-- left Blog Post Bar -->
+      <div class="leftbar"> 
+      <a class="intropadding" href="http://dannyhwangca.github.io/blog.html"> Intro Page </a>
+      <a class="articlepadding" href="http://dannyhwangca.github.io/git.html"> Post 1: Version Control & Git</a>
+      <a class="articlepadding" href="http://dannyhwangca.github.io/css-concepts.html"> Post 2: Css Concepts</a>
+	    <a class="articlepadding" href="http://dannyhwangca.github.io/arrays-hashes.html"> Post 3: Arrays Vs Hashes!</a>
+	    <a class="articlepadding" href="https://dannyhwangca.github.io/enumerable-methods.html"> Post 4: Enumerables! .map!</a>
+      <a class="articlepadding" href="https://dannyhwangca.github.io/ruby-classes.html"> Post 5: Ruby-Classes!</a>
+      <a class="articlepadding" href="#"> Post 6: Do Be Determined!</a>
+	</div>
+<!-- left Blog Post Bar end-->
+
+<!-- My picture Box (right)-->
+        <div class="rightbar"> 
+        
+                <div class="rightbartext">
+	<main>
+
+  
+<h3> Understanding Ruby Class </h3>
+<b> What is a Ruby class? </b>
+<br>
+A ruby class is the associated “type” linked to individual objects. The class gives the objects is is related to certain traits and properties that run through all objects associated with that class. 
+<br>
+Let’s use a real world example.
+<br>
+Let’s say a Ford Brand Card is a specific object. It is similar to other cars and is a car (class) itself. You can say all cars are a type of vehicle (super class). 
+<br> 
+So, we know certain attributes are associated with being a vehicle. Cars and trucks both carry passengers. Cars and airplanes both hold cargo. So, some shared traits across the board when you associate an object being a vehicle. 
+<br>
+Now, we know there’s a difference between cars and trucks. Cars are smaller than trucks and trucks are usually used to haul larger cargo. In turn, we know specific details are shared with all cars. Cars do not have a bed or cargo box like trucks. Cars are usually around the same size as other cars.
+<br> 
+Finally, we understand certain aspect about the type of object a Ford Brand Car is. It has the Ford brand warranties. It has the ford logo on it somewhere and associates with the ford assigned model type you can use to reference it. 
+<br>
+So,similarly, ruby objects inherit certain selected traits / characteristics from its class and its superclass and so on. 
+<h3> Examination of ruby class / method codes </h3>
+
+Below is a simple class code that will process a method upon initializing. 
+<br>
+<div class="code">
+class Greeting => #We define the class as Greeting.
+   def hello => #We define a method for the class as hello.
+      puts "Hello guy!" => #The code the method will run.
+   end 
+end
+</div>
+<br>
+So, above we created a class called Greeting and defined a method for that class to run a code.
+<br>
+<b>To run the above code we use:</b>
+<div class="code">
+test = Greeting.new
+test.hello
+</div>
+<br>
+In order to run the code, we must first initialize the Greeting class for a variable we want to use.
+Then, we directly call the method using that variable. 
+<br>
+Additionally we can use different types of variables throughout our class.
+<br> 
+<b> Talking about type of varialbes! </b>
+<ol>
+<li>Local Variables (variable) - Are the most common variables but can only be used in the method they are defined in.</li>
+<li>Instance Vairables (@variable) - That can be used across methods for a particular instance or object </li>
+<li>Class Variables (@@variable) - That are available across objects of a whole class it is asociated with. </li>
+<li>Global Variables ($variable) - That are available across classes. </li>
+</ol>
+<div class="code">
+$one = 1
+
+class Math
+   @@two = 2
+
+   def print
+	@three = 3
+	p $one
+p @@two 
+p @three
+   end 
+
+   def print2
+	p @three
+   end
+
+end
+
+test = Math.new
+test.print
+test.print2
+</div>
+<br> 
+If you examine the code above, we can still print out $one even though it is outside the class because it is a global variable.
+<br>
+We can print out @@ two even though it is outside the method because it is a class variable.
+<br>
+If you review print2 method, we did not define any variables there, but; because we defined the instance variable @three within the first print method, we can use it in print2. 
+<br> 
+I hope this shines more light on ruby classes for you!
+
+
+
+
+
+    	</main>
+                </div>
+        </div>        
+<!-- My picture Box (right) end-->
+
+<!-- Footer Section -->
+	<div class="footer">
+		<a href="https://www.facebook.com/" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/facebook.png?raw=true" alt="FaceBook!"></a>
+            	<a href="https://www.linkedin.com/in/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/linkin.png?raw=true" alt="LinkedIn"></a>
+            	<a href="https://github.com/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/git-icon.png?raw=true" alt="Github!"></a>
+	</div>
+<!-- End Footer Section -->
+
+
+	</body>
+</html>

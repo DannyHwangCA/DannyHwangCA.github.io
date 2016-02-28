@@ -51,22 +51,22 @@
 <b> What is a Ruby class? </b>
 <br>
 A ruby class is the associated “type” linked to individual objects. The class gives the objects is is related to certain traits and properties that run through all objects associated with that class. 
-<br>
+<br><br>
 Let’s use a real world example.
-<br>
+<br><br>
 Let’s say a Ford Brand Card is a specific object. It is similar to other cars and is a car (class) itself. You can say all cars are a type of vehicle (super class). 
-<br> 
+<br> <br>
 So, we know certain attributes are associated with being a vehicle. Cars and trucks both carry passengers. Cars and airplanes both hold cargo. So, some shared traits across the board when you associate an object being a vehicle. 
-<br>
+<br><br>
 Now, we know there’s a difference between cars and trucks. Cars are smaller than trucks and trucks are usually used to haul larger cargo. In turn, we know specific details are shared with all cars. Cars do not have a bed or cargo box like trucks. Cars are usually around the same size as other cars.
-<br> 
+<br> <br>
 Finally, we understand certain aspect about the type of object a Ford Brand Car is. It has the Ford brand warranties. It has the ford logo on it somewhere and associates with the ford assigned model type you can use to reference it. 
-<br>
+<br><br>
 So,similarly, ruby objects inherit certain selected traits / characteristics from its class and its superclass and so on. 
 <h3> Examination of ruby class / method codes </h3>
 
 Below is a simple class code that will process a method upon initializing. 
-<br>
+<br><br>
 <div class="code">
 class Greeting => #We define the class as Greeting.
    def hello => #We define a method for the class as hello.
@@ -74,20 +74,20 @@ class Greeting => #We define the class as Greeting.
    end 
 end
 </div>
-<br>
+<br><br>
 So, above we created a class called Greeting and defined a method for that class to run a code.
-<br>
+<br><br>
 <b>To run the above code we use:</b>
 <div class="code">
 test = Greeting.new
 test.hello
 </div>
-<br>
+<br><br>
 In order to run the code, we must first initialize the Greeting class for a variable we want to use.
 Then, we directly call the method using that variable. 
-<br>
+<br><br>
 Additionally we can use different types of variables throughout our class.
-<br> 
+<br> <br>
 <b> Talking about type of varialbes! </b>
 <ol>
 <li>Local Variables (variable) - Are the most common variables but can only be used in the method they are defined in.</li>
@@ -118,13 +118,13 @@ test = Math.new
 test.print
 test.print2
 </div>
-<br> 
+<br> <br>
 If you examine the code above, we can still print out $one even though it is outside the class because it is a global variable.
-<br>
+<br><br>
 We can print out @@ two even though it is outside the method because it is a class variable.
-<br>
+<br><br>
 If you review print2 method, we did not define any variables there, but; because we defined the instance variable @three within the first print method, we can use it in print2. 
-<br> 
+<br> <br>
 I hope this shines more light on ruby classes for you!
 
 

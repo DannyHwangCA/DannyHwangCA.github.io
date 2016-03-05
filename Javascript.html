@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog Page</title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/blog.css">
+
+<!-- Header Section -->
+	<body>
+	    <div class="header">
+	        Welcome To My Blog Page!
+	    </div>
+	    
+<!-- Header Section end -->
+
+<!-- Navigation Bar -->
+     	<div class="nav">
+	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
+                <a class="navbutton" href="https://dannyhwangca.github.io/projects/index.html">Projects</a>  
+                <a class="navbutton" href="#">Resume</a>  
+                <a class="navbutton" href="http://dannyhwangca.github.io/blog.html">Blog</a>  
+                <a class="navbutton" href="https://dannyhwangca.github.io/about.html">About Me</a>  
+                <a class="navbutton" href="https://dannyhwangca.github.io/contact.html">Contact Me</a> 
+         </div>
+  
+  
+<!-- Navigation bar end -->
+
+<!-- left Blog Post Bar -->
+      <div class="leftbar"> 
+      	<a class="intropadding" href="http://dannyhwangca.github.io/blog.html"> Intro Page </a>
+      	<a class="articlepadding" href="http://dannyhwangca.github.io/git.html"> Post 1: Version Control & Git</a>
+	<a class="articlepadding" href="http://dannyhwangca.github.io/css-concepts.html"> Post 2: Css Concepts</a>
+ 	<a class="articlepadding" href="http://dannyhwangca.github.io/arrays-hashes.html"> Post 3: Arrays Vs Hashes!</a>
+	<a class="articlepadding" href="https://dannyhwangca.github.io/enumerable-methods.html"> Post 4: Enumerables! .map!</a>
+      	<a class="articlepadding" href="https://dannyhwangca.github.io/ruby-classes.html"> Post 5: Ruby-Classes!</a>
+      	<a class="articlepadding" href="#"> Post 6: Do Be Determined!</a>
+	</div>
+<!-- left Blog Post Bar end-->
+
+<!-- My picture Box (right)-->
+  <div class="rightbar"> 
+  <div class="rightbartext">
+	<main>
+	
+	<h3> Difference of Javascript Objects vs Ruby Hashes <h4>
+	To understand the similarities and differences between Javascript Objects and Ruby Hashes, we must first examine how each is creates
+	<br><br>
+	First, let's comapre the creation of a variable with assigned value in Javascript and Ruby.  
+	<br><br>
+	In Javascript, we use the following code to create a varriable with an assigned value:
+	<div class = "code">
+	var apple = "core";
+	</div>
+	This code will give the variable apple an string value called "core"
+	<br><br>
+	In ruby, we can directly link a variable to a string;
+	<div class = "code">
+	apple = "core"
+	</div>
+  Similarly, this sets a variable apple to the string value "core".
+  <br><br>
+  <b> Next, let's add values ot the objects </b>
+  <br><br>
+  In Javascript, we can directly attribute our variable assigned value to an object. 
+  <div class = "code">
+  //1st using the Object literal notation:
+  var apple = { "center": "core"};
+  
+  //2nd using the new Object constructor:
+  var apple = new Object()
+  apple["center"] = "core"
+  </div>
+  In the above code, we set a key or "object" as "center" and attributed that with the value "core".
+  <br><br>
+  In the Object literal notation, we directly attributed the key or object :center with the string value "core".
+  In the new Object constructor, we linked the varaible apple with a new Object() or center: and then established the value of "center" to be "core".
+  <br><br>
+  Let's take a look at how to do this in ruby. 
+  <div class = "code>
+  //1st using Hash Literal notation
+  apple = { "center" => "core"}
+
+  //2nd using Hash.new constructor 
+  apple = Hash.new()
+  apple[ "center"] = "core"
+  </div>
+  As you can see, Javascripts Object literal notation and ruby's Hash literal notation have different syntaxes. 
+  <br>
+  Java uses the colon ":" to associate an object (key) with a property (value). 
+  <br>
+  Ruby uses a "=>" to associate a value to a key.
+  <br><br>
+  This occurs because the colon ":" in ruby is used to craete an immutable symbol. 
+  <br>
+  So, we can have a hash with a symbol an associated value. 
+  <div class = "code">
+  //In Ruby, we can make a hash with a symbol as its key.
+  apple = { center:"code" }
+  </div>
+  But, this syntax in ruby, creates a :center symbol with a value "code". So, it's technically different than the syntax in Javascript. 
+  <br><br>
+  And Finally, another difference between Javascript objects and Ruby Hashes, is the addition of the "var" syntax to create a variable.
+  <br> <br>
+  I hope this blog addresses the minor differences in syntax between Javascript Object and Ruby Hashes. 
+  </main>
+  </div>
+  </div>        
+<!-- My picture Box (right) end-->
+
+<!-- Footer Section -->
+	<div class="footer">
+		<a href="https://www.facebook.com/" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/facebook.png?raw=true" alt="FaceBook!"></a>
+            	<a href="https://www.linkedin.com/in/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/linkin.png?raw=true" alt="LinkedIn"></a>
+            	<a href="https://github.com/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/git-icon.png?raw=true" alt="Github!"></a>
+	</div>
+<!-- End Footer Section -->
+
+
+	</body>
+</html>

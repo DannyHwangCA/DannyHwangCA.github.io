@@ -51,42 +51,57 @@
 	First, let's comapre the creation of a variable with assigned value in Javascript and Ruby.  
 	<br><br>
 	In Javascript, we use the following code to create a varriable with an assigned value:
+	<br>
 	<div class = "code">
 	var apple = "core";
 	</div>
+	<br>
 	This code will give the variable apple an string value called "core"
 	<br><br>
 	In ruby, we can directly link a variable to a string;
+	<br>
 	<div class = "code">
 	apple = "core"
 	</div>
+	<br>
   Similarly, this sets a variable apple to the string value "core".
   <br><br>
   <b> Next, let's add values ot the objects </b>
   <br><br>
   In Javascript, we can directly attribute our variable assigned value to an object. 
+  <br>
   <div class = "code">
   //1st using the Object literal notation:
+  <br>
   var apple = { "center": "core"};
-  
+  <br><br>
   //2nd using the new Object constructor:
+  <br>
   var apple = new Object()
+  <br>
   apple["center"] = "core"
   </div>
+  <br>
   In the above code, we set a key or "object" as "center" and attributed that with the value "core".
   <br><br>
   In the Object literal notation, we directly attributed the key or object :center with the string value "core".
+  <br><br>
   In the new Object constructor, we linked the varaible apple with a new Object() or center: and then established the value of "center" to be "core".
   <br><br>
-  Let's take a look at how to do this in ruby. 
-  <div class = "code>
-  //1st using Hash Literal notation
+  Let's take a look at how to do this in ruby.
+  <br>
+  <div class = "code">
+  //1st using Hash Literal notation 
+  <br>
   apple = { "center" => "core"}
-
+  <br><br>
   //2nd using Hash.new constructor 
+  <br>
   apple = Hash.new()
+  <br>
   apple[ "center"] = "core"
   </div>
+  <br>
   As you can see, Javascripts Object literal notation and ruby's Hash literal notation have different syntaxes. 
   <br>
   Java uses the colon ":" to associate an object (key) with a property (value). 
@@ -98,6 +113,7 @@
   So, we can have a hash with a symbol an associated value. 
   <div class = "code">
   //In Ruby, we can make a hash with a symbol as its key.
+  <br>
   apple = { center:"code" }
   </div>
   But, this syntax in ruby, creates a :center symbol with a value "code". So, it's technically different than the syntax in Javascript. 

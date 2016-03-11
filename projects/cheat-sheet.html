@@ -114,6 +114,36 @@
 	<br>
 	// This time .all? returns false because the 18 / 4 has a remainder of 2!
 	</div>
+	<h3>Enumerable - #reduce</h3>
+	<div class = "code">
+	array = [2,4,6]
+	<br><br>
+	>>array.reduce(:+)
+	<br>
+	=> 12
+	<br>
+	// .reduce will return the sume of all the numbers in the array. 
+	<br>
+	// This is similar to the .inject enumberable. 
+	<br><br>
+	>> array.inject {|sum, x| sum + x }
+	<br>
+	=> 12
+	<br>
+	// returns the sum of a memory placement, the "sum" of the first 2 elements, and adds it tot he placeholder "x", the next element, and the replaces the sum again. 
+	<br>
+	// At the very end, the total sum is returned. 
+	<br><br>
+	// Additionally you can set the initial value of the memory placement. 
+	<br><br>
+	>> array.reduce(4, :*) => 16 or  4 (initial memory postion) + (2 + 4 + 6) (x place holder)
+	<br>
+	//Similarly...
+	<br>
+	>> array.inject(4) {|sum, x| sum + x} = > 16 or 4 (initial memory postion) + (2 + 4 + 6) (x place holder)
+	<br><br>
+	// This means that if we did not set an initial value for the memory position, it would be the default first element of array or range. 
+	</div>
 
       	</section>
     	</main>

@@ -54,7 +54,27 @@
 	Ennumerables provide many helpful functions: Searching, Sorting, Conditional, Looping & more
 	<br><br>
 	<h3>Enumerable Searching</h3>
-	
+	<div class = "code">
+	array = [2,4,6,8]
+	<br><br>
+	>> p array.select { |x| x > 4}
+	<br>
+	=> [6,8]
+	<br>
+	// returns array with numbers greater than 4
+	<br><br>
+	>> p array.detect { |x| x > 4}
+	<br>
+	=> 6
+	<br>
+	// returns first detected integr greater than 4
+	<br><br>
+	>> p array.reject { |x| x > 4}	
+	<br>
+	=> [2,4]
+	<br>
+	// returns an array without any integers greater than 4
+	</div>
 	
 
 

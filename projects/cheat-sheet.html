@@ -92,11 +92,27 @@
 	<br><br>
 	// But, we can use an enumberable to solve this sorting
 	<br><br>
-	array.sort_by(|x| x.to_i)
+	>> array.sort_by(|x| x.to_i)
 	<br>
 	=> ["1", 3, "4", 6, "7"]
 	<br>
 	// This yields a result because we first changed all strings to integers before sorting!
+	</div>
+	<h3>Examples of Enumerable Conditionals</h3>
+	<div class="code">
+	array = [4,8,18]
+	<br><br>
+	>> array.all?{|x| x.even?}
+	<br>
+	=> true
+	<br>
+	// .all? checks if every element in an array meets the conditional we set as true
+	<br><br>
+	>> array.all?{|x| x % 4 == 0 }
+	<br>
+	=> false
+	<br>
+	// This time .all? returns false because the 18 / 4 has a remainder of 2!
 	</div>
 
       	</section>

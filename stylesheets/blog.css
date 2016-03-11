@@ -10,6 +10,7 @@
 
 .intropadding {
     margin: 5% 2.5% 2.5% 2.5%;
+    height: auto;
     padding: 3%;
     display: block;
     font-weight: bold;
@@ -26,6 +27,7 @@
 
 .articlepadding {
     margin: 2% 5% 1% 5%;
+    height:auto;
     padding: 2%;
     display: block;
     font-weight: bold;

@@ -1,12 +1,12 @@
 .header {
-    Text-align:center;
     color:White;
     Font-size:30px;
     Font-family: Arial;
-    background-color:#58D4FD;
-    margin: 5% 10% .1% 10%;
-    padding:10px;
+    background-color:#95B8D1;
+    padding:15px;
     font-weight: bold;
+    width: 100%;
+    height: auto;
  
 }
 

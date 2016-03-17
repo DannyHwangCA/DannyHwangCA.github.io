@@ -3,8 +3,8 @@
     color:White;
     Font-size: 20px;
     Font-family: Arial;
-    background-color:#95B8D1;
-    padding:15px;
+    background-color:#809BCE;
+    padding: 15px;
     font-weight: bold;
     width: 100%;
     height: auto;
@@ -12,13 +12,15 @@
 }
 
 .nav {
-    text-align:center;
+    position: fixed;
+    text-align: center;
     color:White;
     font-size: 30px;
     font-family: Arial;
-    background-color:#86D7F2;
-    margin: .1% 10% .1% 10%;
-    padding: 10px;
+    background-color:#95B8D1;
+    width 100%;
+    opacity: 0.5;
+    padding: 15px;
 }
 
 .navbutton {

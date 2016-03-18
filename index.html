@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<!-- Begin Rotator -->
- <script language="JavaScript1.2">
-
-var howOften = 5; //number often in seconds to rotate
-var current = 0; //start the counter at 0
-var ns6 = document.getElementById&&!document.all; //detect netscape 6
-
-// place your images, text, etc in the array elements here
-var items = new Array();
-    items[0]="<a href='http://imgur.com/9kzWYkc'><img alt='image0 (9K)' src='http://i.imgur.com/skZs3kT.png' height='300' width='300' border='0' /></a>"; //a linked image
-    items[1]="<a href='link.htm'><img alt='image1 (9K)' src='http://imgur.com/9kzWYkc' height='300' width='300' border='0' /></a>"; //a linked image
-    items[2]="<a href='link.htm'><img alt='image2 (9K)' src='/Images/image2.jpg' height='300' width='300' border='0' /></a>"; //a linked image
-
-
-function rotater() {
-    document.getElementById("placeholder").innerHTML = items[current];
-    current = (current==items.length-1) ? 0 : current + 1;
-    setTimeout("rotater()",howOften*1000);
-}
-
-function rotater() {
-    if(document.layers) {
-        document.placeholderlayer.document.write(items[current]);
-        document.placeholderlayer.document.close();
-    }
-    if(ns6)document.getElementById("placeholderdiv").innerHTML=items[current]
-        if(document.all)
-            placeholderdiv.innerHTML=items[current];
-
-    current = (current==items.length-1) ? 0 : current + 1; //increment or reset
-    setTimeout("rotater()",howOften*1000);
-}
-window.onload=rotater;
-//-->
-</script>
-<!-- END Rotator -->
-
 		<title>My Index Page</title>
 		<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
-	</head>
-	<body>
-  
+
+
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<!-- Slider -->
+
+
+<script>
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+            directionNavHide: false,
+            captionOpacity: 1,
+            prevText: '<',
+            nextText: '>'
+        });
+    });
+</script>
+<!-- Slider -->
+
+
 <!-- Navigation Bar -->
         <div class="nav">
 	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
@@ -65,7 +49,17 @@ window.onload=rotater;
 
 <!-- left Banner Box -->
   <div class="leftside"> 
-<layer id="placeholderlayer"></layer><div id="placeholderdiv"></div>  
+<div id="slider" class="nivoSlider">
+ 
+    <img src="http://i.imgur.com/9kzWYkc.png" alt="" title="#caption1">
+ 
+    <img src="img/slide2.png" alt="">
+ 
+    <img src="img/slide3.png" alt="" title="#caption3">
+ 
+    <img src="img/slide4.png" alt="">
+ 
+</div>
   </div>
 <!-- left Banner Box end-->
 

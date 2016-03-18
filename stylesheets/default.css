@@ -41,14 +41,14 @@
 .leftside {
     background-color: #EDEDED;
     height: auto;
-    width: auto;
+    width: 90%;
     float: left;
     text-align:center;
     color:White;
     font-size: 5px;
     font-family: Arial;
-    border-left: 5em;
-    border-right: 5em;
+    border-left: 5%;
+    border-right: 5%;
     border-left-color: #818D92;
     border-right-color: #818D92;
     border-style: solid;

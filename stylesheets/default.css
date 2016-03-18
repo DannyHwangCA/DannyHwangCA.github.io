@@ -20,7 +20,7 @@
     color:White;
     font-size: 30px;
     font-family: Arial;
-    background-color: #95B8D1;
+
     width 100%;
     padding: 15px;
 }
@@ -40,7 +40,7 @@
 }
 
 .leftside {
-    background-color:#7DCCE7;
+    background-color:#818D92;
     height: 300px;
     width: 70%;
     float: left;
@@ -51,7 +51,7 @@
 }
 
 .rightside {
-    background-color: black;
+    background-color: #586A6A;
     float: right;
     height: 300px;
     width: 30%;
@@ -77,6 +77,11 @@
     background-color: #95B8D1;
     clear:both;
     text-align:center;
+    border-left: 20em;
+    border-right: 20em;
+    border-left-color: #809BCE;
+    border-right-color: #809BCE;
+    border-style: solid;
 }
 
 .footerimg {

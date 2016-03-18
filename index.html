@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Index Page</title>
-		<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+    <link rel="stylesheet" href="jquery.mSimpleSlidebox.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="jquery.mSimpleSlidebox.js"></script>
+    <script>
+    (function($){
+        $(document).ready(function(){
+            $(".slidebox").mSlidebox();
+        });
+    })(jQuery);
+		</script>
+    
+	  <title>My Index Page</title>
+	  <link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+    
+    
 	</head>
 	<body>
-
+  
 <!-- Navigation Bar -->
         <div class="nav">
 	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
@@ -26,13 +40,27 @@
 	    
 <!-- Header Section end -->
 
-
-        
-<!-- My picture Box (right)-->
-        <div class="rightside"> 
-
-         </div>
-<!-- My picture Box (right)-->
+<!-- left Banner Box -->
+  <div class="leftside"> 
+    <div class="slidebox">
+      <ul>
+        <li>
+            <div>slide 1 content</div>
+        </li>
+        <li>
+            <div>slide 2 content</div>
+        </li>
+        <li>
+            <div>slide 3 content</div>
+        </li>
+        <li>
+            <div>slide 4 content</div>
+        </li>
+      </ul>
+  </div>
+  
+  </div>
+<!-- left Banner Box end-->
 
 <!-- Footer Section -->
 	<div class="footer">
@@ -41,7 +69,3 @@
             <a href="https://github.com/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/git-icon.png?raw=true" alt="Github!"></a>
 		</div>
 <!-- End Footer Section -->
-
-
-	</body>
-</html>

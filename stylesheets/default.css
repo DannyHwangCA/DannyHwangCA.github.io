@@ -6,23 +6,27 @@
     background-color:#95B8D1;
     padding: 15px;
     font-weight: bold;
-    width: 100%;
+    width: auto;
     height: auto;
- 
-}
+    border-left: 15em;
+    border-right: 15em;
+    border-left-color: #809BCE;
+    border-right-color: #809BCE;
+    border-style: solid;
+ }
 
 .nav {
     text-align: center;
     color:White;
     font-size: 30px;
     font-family: Arial;
-    background-color: #809BCE;
+    background-color: #95B8D1;
     width 100%;
     padding: 15px;
 }
 
 .navbutton {
-    background-color: #0089e6;
+    background-color: #809BCE;
     border: none;
     color: white;
     padding: 5px 10px 5px 10px;
@@ -37,18 +41,18 @@
 
 .leftside {
     background-color:#7DCCE7;
-    height: 50%;
-    width: 300px;
-    float:left;
+    height: 300px;
+    width: 70%;
+    float: left;
     text-align:center;
     color:White;
-    font-size: 30px;
+    font-size: 70px;
     font-family: Arial;
 }
 
 .rightside {
-    background-color: #7DCCE7;
-    float:left;
+    background-color: black;
+    float: right;
     height: 300px;
     width: 30%;
     text-align:center;

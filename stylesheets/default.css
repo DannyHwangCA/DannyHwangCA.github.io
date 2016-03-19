@@ -49,7 +49,21 @@
     font-family: Arial;
     padding: 3% 0 3% 0;
 }
-
+.middlesection-contact {
+    background-color: #A79292;
+    height: auto;
+    width 100%;
+    color: white;
+    font-size: 30px;
+    font-family: Arial;
+    text-align: left;
+    border-left: 10em;
+    border-right: 10em;
+    border-left-color: #6A5959;
+    border-right-color: #6A5959;
+    border-style: solid;
+    padding: 5% 25% 5% 25%;
+}
 
 .middlesection {
     background-color: #A79292;

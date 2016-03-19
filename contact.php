@@ -152,9 +152,7 @@ Thank you for contacting us. We will be in touch with you very soon.
  
 }
  
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
 	<head>
 		<title>Contact Me Page</title>

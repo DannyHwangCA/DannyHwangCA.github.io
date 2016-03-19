@@ -82,8 +82,8 @@
 }
 
 .center-picture {
-    display: block;
-    margin: auto;
+    width: 50%;
+    margin: 0 auto; 
 }
 
 .footer {

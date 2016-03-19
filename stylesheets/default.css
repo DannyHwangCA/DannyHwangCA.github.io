@@ -81,6 +81,10 @@
     padding: 2% 10% 2% 10%;
 }
 
+.center-picture {
+    margin: auto;
+}
+
 .footer {
     background-color: #A79292;
     clear:both;

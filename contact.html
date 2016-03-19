@@ -1,4 +1,22 @@
-?><!DOCTYPE html>
+<?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
+
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Contact Me Page</title>
@@ -30,60 +48,21 @@
 
 <div class="middlesection-compact"
 
-Contact me directly at: <a href="mailto:DannyHwangCA@gmail.com?Subject=Contact From Site" target="_top">DannyHwangCA@gmail.com</a>
-<br>
 
-<form name="contactform" method="post" action="send_form_email.php">
-<table width="450px">
-<tr>
- <td valign="top">
-  <label for="first_name">First Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="first_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top"">
-  <label for="last_name">Last Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="last_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="email">Email Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="email" maxlength="80" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-   <label for="telephone">Telephone Number</label>
-  </td>
-  <td valign="top">
-   <input  type="text" name="telephone" maxlength="30" size="30">
-  </td>
- </tr>
- <tr>
-  <td valign="top">
-   <label for="comments">Comments *</label>
-  </td>
-  <td valign="top">
-   <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-  </td>
- </tr>
- <tr>
-  <td colspan="2" style="text-align:center; font-size:30px;" >
-   <input type="submit" value="Submit">
-  </td>
-</tr>
-</table>
-</form>
-</div>
+    <?=$thankYou ?>
 
+    <form method="post" action="contact.php">
+        <label>Name:</label>
+        <input name="sender">
+
+        <label>Email address:</label>
+        <input name="senderEmail">
+
+        <label>Message:</label>
+        <textarea rows="5" cols="20" name="message"></textarea>
+
+        <input type="submit" name="submit">
+    </form>
 
 <!-- End Middle Section -->
 

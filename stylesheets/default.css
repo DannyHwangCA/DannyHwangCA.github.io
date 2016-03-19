@@ -25,7 +25,7 @@
 }
 
 .navbutton {
-    background-color: #809BCE;
+    background-color: #6A5959;
     border: none;
     color: white;
     padding: 5px 10px 5px 10px;
@@ -64,13 +64,13 @@
 }
 
 .footer {
-    background-color: #95B8D1;
+    background-color: #A79292;
     clear:both;
     text-align:center;
     border-left: 20em;
     border-right: 20em;
-    border-left-color: #809BCE;
-    border-right-color: #809BCE;
+    border-left-color: #6A5959;
+    border-right-color: #6A5959;
     border-style: solid;
 }
 

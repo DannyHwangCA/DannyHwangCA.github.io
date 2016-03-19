@@ -82,6 +82,7 @@
 }
 
 .center-picture {
+    display: block;
     margin: auto;
 }
 

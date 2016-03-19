@@ -62,7 +62,7 @@
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;
-    padding: 5% 25% 5% 25%;
+    padding: 0 25% 0 25%;
 }
 
 .middlesection {
@@ -85,8 +85,8 @@
     background-color: #A79292;
     clear:both;
     text-align:center;
-    border-left: 17em;
-    border-right: 17em;
+    border-left: 18em;
+    border-right: 18em;
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;

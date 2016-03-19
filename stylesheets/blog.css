@@ -1,5 +1,5 @@
 .leftbar {
-    background-color: #7DCCE7;
+    background-color: #6A5959;
     float:left;
     margin: 0 .1% auto 10%;
     height: 103%;
@@ -43,7 +43,7 @@
 }
 
 .rightbar {
-    background-color:#7DCCE7;
+    background-color:#6A5959;
     margin: 0 auto .1% 0;
     height: 100%;
     width: 60%;

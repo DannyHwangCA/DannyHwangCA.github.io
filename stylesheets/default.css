@@ -54,7 +54,7 @@
     height: auto;
     width 100%;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-family: Arial;
     text-align: left;
     border-left: 10em;
@@ -62,7 +62,7 @@
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;
-    padding: 3% 25% 3% 25%;
+    padding: 3% 20% 3% 20%;
 }
 
 .middlesection {

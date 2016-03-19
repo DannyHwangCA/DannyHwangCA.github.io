@@ -52,14 +52,19 @@
 
 
 .middlesection {
-    background-color: #7DCCE7;
-    margin: 0 10% 0 10%;
+    background-color: #6A5959;
     height: auto;
+    width 100%;
     color: white;
     font-size: 30px;
     font-family: Arial;
     text-align: center;
     padding: 50px 0 50px 0;
+    border-left: 15em;
+    border-right: 15em;
+    border-left-color: #6A5959;
+    border-right-color: #6A5959;
+    border-style: solid;
     
 }
 

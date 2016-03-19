@@ -69,13 +69,13 @@
     background-color: #A79292;
     clear:both;
     text-align:center;
-    border-left: 5em;
-    border-right: 5em;
+    border-left: 10%;
+    border-right: 10%;
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;
     margin: 10px auto 10px auto;
-    width: 80%;
+    width: 60%;
 }
 
 .code {

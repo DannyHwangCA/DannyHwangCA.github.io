@@ -49,7 +49,7 @@
     font-family: Arial;
     padding: 3% 0 3% 0;
 }
-.middlesection-contact {
+.middlesection-compact {
     background-color: #A79292;
     height: auto;
     width 100%;
@@ -62,7 +62,7 @@
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;
-    padding: 3% 20% 3% 20%;
+    padding: 3% 25% 3% 25%;
 }
 
 .middlesection {
@@ -73,12 +73,12 @@
     font-size: 25px;
     font-family: Arial;
     text-align: left;
-    border-left: 10em;
-    border-right: 10em;
+    border-left: 15em;
+    border-right: 15em;
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;
-    padding: 5% 20% 5% 20%;
+    padding: 5% 15% 5% 15%;
 }
 
 .footer {

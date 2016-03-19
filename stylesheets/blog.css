@@ -69,8 +69,8 @@
     background-color: #A79292;
     clear:both;
     text-align:center;
-    border-left: 15em;
-    border-right: 15em;
+    border-left: auto;
+    border-right: auto;
     border-left-color: #6A5959;
     border-right-color: #6A5959;
     border-style: solid;

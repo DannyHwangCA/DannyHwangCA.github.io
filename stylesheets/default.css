@@ -48,7 +48,7 @@
     font-size: 5px;
     font-family: Arial;
     padding: 3% 0 3% 0;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 

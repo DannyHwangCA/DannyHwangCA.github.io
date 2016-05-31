@@ -1,83 +1,135 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>My Index Page</title>
-		<link rel="stylesheet" type="text/css" href="DannyHwangCA.github.io/stylesheets/default.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- Banner rotator -->
-<script language="JavaScript1.2">
+    <title>Danny Hwang - Web Developer</title>
 
-var howOften = 5; //number often in seconds to rotate
-var current = 0; //start the counter at 0
-var ns6 = document.getElementById&&!document.all; //detect netscape 6
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  </head>
 
-// place your images, text, etc in the array elements here
-var items = new Array();
-    items[0]="<a href='https://dannyhwangca.github.io/contact.html' ><img alt='Intro Banner' src='http://i.imgur.com/WxglCe0.png' border='0' /></a>"; //a linked image
-    items[1]="<a href='https://dannyhwangca.github.io/contact.html'><img alt='ASK banner' src='http://i.imgur.com/IxcIZH1.png'  border='0' /></a>"; //a linked image
-    items[2]="<a href='https://dannyhwangca.github.io/about.html'><img alt='Coffee Banner' src='http://i.imgur.com/kSBLc6C.png' border='0' /></a>"; //a linked image
-function rotater() {
-    document.getElementById("placeholder").innerHTML = items[current];
-    current = (current==items.length-1) ? 0 : current + 1;
-    setTimeout("rotater()",howOften*1000);
-}
+  <body>
 
-function rotater() {
-    if(document.layers) {
-        document.placeholderlayer.document.write(items[current]);
-        document.placeholderlayer.document.close();
-    }
-    if(ns6)document.getElementById("placeholderdiv").innerHTML=items[current]
-        if(document.all)
-            placeholderdiv.innerHTML=items[current];
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" href="https://www.linkedin.com/in/dannyhwangca" target="_blank">LinkedIn</a>
+          <a class="navbar-brand" href="https://github.com/DannyHwangCA" target="_blank">Github</a>
+        </div>
 
-    current = (current==items.length-1) ? 0 : current + 1; //increment or reset
-    setTimeout("rotater()",howOften*1000);
-}
-window.onload=rotater;
-//-->
-</script>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div>
 
-<!-- End Banner Rotator -->
-
-</head>
-
-<body>
+      </div>
+    </div>
 
 
-<!-- Navigation Bar -->
-        <div class="nav">
-	        <a class="navbutton" href="http://dannyhwangca.github.io/index.html"><span>Home</span></a> 
-                <a class="navbutton" href="https://dannyhwangca.github.io/projects/index.html">Projects</a>  
-                <a class="navbutton" href="#">Resume</a>  
-                <a class="navbutton" href="http://dannyhwangca.github.io/blog.html">Blog</a>  
-                <a class="navbutton" href="https://dannyhwangca.github.io/about.html">About Me</a>  
-                <a class="navbutton" href="https://dannyhwangca.github.io/contact.html">Contact Me</a> 
-         </div>
-  
-<!-- Navigation bar end -->
+	<div id="headerwrap">
 
-<!-- Header Section -->
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<h4>Welcome</h4>
+					<h1>Danny Hwang</h1>
+					<h4>Web Developer & Software Engineer</h4>
+				</div>
+			</div>
+	    </div> 
+
+
+	</div>
 	
-	    <div class="header">
-	      	    Development In Motion
-	    </div>
-	    
-<!-- Header Section end -->
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<h1>Projects</h1>
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 gallery">
+				<a href="https://youtu.be/OI2wkQTdCrg" target="_blank"><img src="assets/img/portfolio/video.png" class="img-responsive"></a>
+			</div>
 
-<!-- left Banner Box -->
-  <div class="leftside"> 
-  <layer id="placeholderlayer"></layer><div id="placeholderdiv"></div>
-  </div>
-<!-- left Banner Box end-->
+			<div class="col-lg-6 col-md-6 col-sm-6 gallery">
+				<a href="https://github.com/DannyHwangCA/CycleTheBay" target="_blank"><img src="assets/img/portfolio/CycleTheBay-git.png" class="img-responsive"></a>
+			</div>
 
-<!-- Footer Section -->
-	<div class="footer">
-		    <a href="https://www.facebook.com/" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/facebook.png?raw=true" alt="FaceBook!"></a>
-            <a href="https://www.linkedin.com/in/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/linkin.png?raw=true" alt="LinkedIn"></a>
-            <a href="https://github.com/DannyHwangCA" target="_blank"><img class="footerimg" src="https://github.com/DannyHwangCA/DannyHwangCA.github.io/blob/master/imgs/git-icon.png?raw=true" alt="Github!"></a>
+			<div class="col-lg-6 col-md-6 col-sm-6 gallery">
+				<a href="https://lit-waters-72995.herokuapp.com/" target="_blank"><img src="assets/img/portfolio/Master.png" class="img-responsive"></a>
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-6 gallery">
+				<a href="https://github.com/DannyHwangCA/DBC-Store-Ap" target="_blank"><img src="assets/img/portfolio/Master-git.png" class="img-responsive"></a>
+			</div>
+
 		</div>
-<!-- End Footer Section -->
+	</div>
 
-</body
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<a href="https://www.linkedin.com/in/dannyhwangca" target="_blank">
+				<img src="assets/img/portrait.gif">
+				</a>
+				<h1>About Me</h1>
+				<h3>Danny Hwang - Web Developer</h3>
+				<p>The creation of beautiful, meaningful, and functional things has always been my ideal. I seek a part in the next profound idea and a stage with like-minded individuals who embrace the challenges they face. I value constant learning through experimentation, discipline, and collaboration. </p>
+				<p>I understand the value of hard work. My parents are my inspiration, and they worked hard to keep my family afloat. When necessities arise and you need someone at your side, I want to be that person who sees a task through to fruition.  </p>
+				<p>I love solving problems. Finding solutions and setting goals to reach those solutions is empowering. When you are confronted with a problem, what do you do? Don't wither. Don't run. Become intrigued in the problem itself. Become fascinated in the possible solutions.</p>
+				<p>Actionable. Kind. Specific. 
+
+				Being a part of a community's culture is as important as being an actionable member of that community. Being kind to each other and empathetic to our needs. Being specific in our goals and focused on our tasks. 
+
+				This is how we come together to create beautiful and meaningful things. </p>
+			</div>
+
+		</div>
+	</div>
+	
+	<div id="social">
+		<div class="container">
+			<div class="row centered">
+					<a href="https://mail.google.com/mail/?view=cm&fs=1&to=DannyHwangCA@gmail.com" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+					<a href="https://www.linkedin.com/in/dannyhwangca"><i class="fa fa-linkedin"></i></a>
+
+					<a href="https://github.com/DannyHwangCA"><i class="fa fa-github" aria-hidden="true"></i></a>
+			
+			</div>
+		</div>
+	</div>
+
+	<div id="footerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-4">
+					<p><b>Danny Hwang</b></p>
+				</div>
+			
+				<div class="col-lg-4">
+					<p>Web Developer & Software Engineer</p>
+				</div>
+				<div class="col-lg-4">
+					<p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=DannyHwangCA@gmail.com" target="_blank">DannyHwangCA@gmail.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div><! --/footerwrap -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
 </html>

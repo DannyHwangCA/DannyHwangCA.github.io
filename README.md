@@ -1,2 +1,2 @@
 # DannyHwangCA.github.io
-Personl Website
+Personal Website

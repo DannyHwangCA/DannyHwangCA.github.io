@@ -316,6 +316,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.img-size{
+  width: 500px;
+  height: 300px;
+}
+
 .img-rounded {
   border-radius: 6px;
 }

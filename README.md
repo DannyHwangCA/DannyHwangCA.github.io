@@ -1,2 +1,2 @@
 # DannyHwangCA.github.io
-Personal Website
+Stylized personal site.

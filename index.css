@@ -1,3 +1,14 @@
-button {
-    color: red;
+.master-outer-container {
+    width: 100%;
+}
+
+.master-inner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    border: 1px solid 	#3b5998;
+    border-radius: 5px;
 }

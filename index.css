@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .master-outer-container {
     width: 100%;
 }
@@ -8,7 +12,24 @@
     margin: 0 auto;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .nav-container {
-    border: 1px solid 	#3b5998;
-    border-radius: 5px;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: arial;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-container:hover {
+    border-bottom: 2px solid #3b5998;
 }

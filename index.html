@@ -8,20 +8,21 @@
 </head>
 <body>
 	<nav>
-		<button class="nav-container">
+		<button class="nav-button-container half-transition">
 			Home
 		</button>
-		<button class="nav-container"> 
+		<button class="nav-button-container half-transition"> 
 			About
 		</button>
-		<button class="nav-container">
+		<button class="nav-button-container half-transition">
 			Projects
 		</button>
 	</nav>
+	
 	<div class="master-outer-container">
 		
 		<div class="master-inner-container">
-			<div id="stage" class="home-container">
+			<div id="first" class="home-container">
 				
 			</div>
 			<div  class="about-container">
@@ -48,14 +49,16 @@
 		$(document).ready(function(){
 			console.log("Jquery ready");
 			var tStart = gsap.timeline();
-			tStart.to(".nav-container", {y: 0, opacity:1, stagger: 0.1, duration: 1});
+			tStart.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 1})
 
 			tFirst = gsap.timeline();
-			tFirst.to("nav", {backgroundColor: "white", duration: 0.25});
+			tFirst
+				.to("nav", {backgroundColor: "navy", duration: 0.1}, 0.1)
+				.to(".nav-button-container", {color: "white", duration: 0.1}, "<")
 
 			var controller = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#stage",
+  				triggerElement: "#first",
   				triggerHook: 0
 			})
   			.addIndicators({

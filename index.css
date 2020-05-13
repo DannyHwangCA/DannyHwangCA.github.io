@@ -9,10 +9,11 @@
 .master-inner-container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 55px auto 0 auto;
 }
 
 nav {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +22,9 @@ nav {
     -moz-transition: background-color 0.5s ease;
     -o-transition: background-color 0.5s ease;
     transition: background-color 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .nav-container {

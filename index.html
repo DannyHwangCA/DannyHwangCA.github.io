@@ -45,6 +45,8 @@
 	<script>
 		$(document).ready(function(){
 			console.log("Jquery ready");
+			var tl = gsap.timeline();
+			tl.to(".nav-container", {y: 0, opacity:1, stagger: 0.1, duration: 1});
 		})
 	</script>
 </html>

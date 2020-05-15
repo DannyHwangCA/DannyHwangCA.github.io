@@ -59,6 +59,44 @@ nav {
 
 .home-container {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left-home-container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left-home-container img {
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+}
+
+.left-home-container h3 {
+    text-align: center;
+}
+
+.left-home-container h4 {
+    text-align: center;
+}
+
+.right-home-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.right-home-container p {
+    width: 100%;
 }
 
 .about-container {
@@ -78,4 +116,8 @@ nav {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.normalize-margin {
+    margin-top: 0px;
 }

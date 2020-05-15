@@ -85,7 +85,12 @@
 		$(document).ready(function(){
 			console.log("Jquery ready");
 			var tStart = gsap.timeline();
-			tStart.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.5})
+			tStart
+				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
+				.to(".profile-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+				.to(".profile-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".left-home-container h3", {opacity: 1, duration: 0.25})
+				.to(".left-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
 
 			tFirst = gsap.timeline();
 			tFirst

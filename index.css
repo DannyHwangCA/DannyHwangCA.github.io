@@ -27,6 +27,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .nav-button-container {
@@ -69,7 +70,7 @@ nav {
 }
 
 .left-home-container {
-    width: 30%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +86,7 @@ nav {
 
 .profile-image-container img {
     width: 100%;
-    max-width: 150px;
+    max-width: 200px;
     border-radius: 50%;
     border: 0px solid white;
     opacity: 1;
@@ -106,7 +107,7 @@ nav {
 }
 
 .right-home-container {
-    width: 70%;
+    width: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,6 +117,10 @@ nav {
 .right-home-container p {
     width: 100%;
     margin-top: 0px;
+}
+
+.right-home-container p:last-child {
+    margin-bottom: 0px;
 }
 
 .about-container {

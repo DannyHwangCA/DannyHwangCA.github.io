@@ -14,7 +14,7 @@ body {
 .master-inner-container {
     width: 100%;
     max-width: 1200px;
-    padding: 55px 15px 55px 15px;
+    padding: 60px 15px 60px 15px;
 }
 
 nav {
@@ -65,7 +65,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 25px 0px 50px 0px;
+    margin: 0px 0px 60px 0px;
 }
 
 .left-home-container {

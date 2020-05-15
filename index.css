@@ -73,6 +73,35 @@ body {
     background-size: contain;
 }
 
+.profile-home-image-container {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-200px);
+}
+
+.profile-home-image-container img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 0px solid white;
+    opacity: 1;
+    padding: 5px;
+}
+
+.main-home-container h3 {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.main-home-container h4 {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    opacity: 0;
+}
+
 .about-container {
     width: 100%;
     display: flex;
@@ -89,14 +118,14 @@ body {
     flex-wrap: wrap;
 }
 
-.profile-image-container {
+.profile-about-image-container {
     width: 100%;
     text-align: center;
     opacity: 0;
     transform: translateY(-200px);
 }
 
-.profile-image-container img {
+.profile-about-image-container img {
     width: 100%;
     max-width: 200px;
     border-radius: 50%;

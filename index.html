@@ -26,12 +26,20 @@
 		
 		<div class="master-inner-container">
 			<div id="home" class="home-container">
-				
+				<div class="main-home-container">
+					<div class="profile-home-image-container">
+						<img src="images/danny-hwang.jpg">
+					</div>
+					<h3>Danny Hwang</h3>
+					<h4>Web Developer</h4>
+					<h4>Frontend Engineer</h4>
+					<h4>Passionate Coder</h4>
+				</div>
 			</div>
-			
+
 			<div id="about" class="about-container">
 				<div class="left-about-container">
-					<div class="profile-image-container">
+					<div class="profile-about-image-container">
 						<img src="images/danny-hwang.jpg">
 					</div>
 					<h3>Danny Hwang</h3>
@@ -87,20 +95,43 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			var tStart = gsap.timeline();
-			tStart
-				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
-				.to(".profile-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".right-about-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
-				.to(".left-about-container h3", {opacity: 1, duration: 0.25})
-				.to(".left-about-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
-				
 
 			tFirst = gsap.timeline();
 			tFirst
 				.to("nav", {backgroundColor: "navy", duration: 0.1}, 0.1)
 				.to(".nav-button-container", {color: "white", duration: 0.1}, "<")
+
+			var tStart = gsap.timeline();
+			tStart
+				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
+				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
+				.to(".main-home-container h3", {opacity: 1, duration: 0.25})
+				.to(".main-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
+			
+			var controller = new ScrollMagic.Controller();
+			var scene = new ScrollMagic.Scene({
+  				triggerElement: "#first",
+  				triggerHook: 0
+			})
+  			.addIndicators({
+				colorTrigger: "white",
+				colorStart: "white",
+				colorEnd: "white",
+				indent: 5
+			})
+			.setTween(tFirst)
+			.addTo(controller);
+
+			var tStart = gsap.timeline();
+			tStart
+				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
+				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
+				.to(".main-home-container h3", {opacity: 1, duration: 0.25})
+				.to(".main-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
 
 			var controller = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({

@@ -7,17 +7,20 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<nav>
+	<div class="nav-container">
 		<button class="nav-button-container half-transition">
 			Home
-		</button>
-		<button class="nav-button-container half-transition"> 
-			About
 		</button>
 		<button class="nav-button-container half-transition">
 			Projects
 		</button>
-	</nav>
+		<button class="nav-button-container half-transition"> 
+			About
+		</button>
+		<button class="nav-button-container half-transition"> 
+			Contact
+		</button>
+	</div>
 	
 	<div class="master-outer-container">
 		
@@ -67,6 +70,12 @@
 			<div  class="project-container">
 
 			</div>
+
+			<div  class="page-info-container">
+				<a href="https://www.freepik.com/free-photos-vectors/design">Some Art from www.freepik.com</a>
+			</div>
+
+			
 		</div>
 	</div>
 	
@@ -89,8 +98,10 @@
 				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
 				.to(".profile-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 				.to(".profile-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".right-home-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
 				.to(".left-home-container h3", {opacity: 1, duration: 0.25})
 				.to(".left-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
+				
 
 			tFirst = gsap.timeline();
 			tFirst

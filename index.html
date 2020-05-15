@@ -26,7 +26,10 @@
 		
 		<div class="master-inner-container">
 			<div id="first" class="home-container">
-				<div class="left-home-container">
+				
+			</div>
+			<div  class="about-container">
+				<div class="left-about-container">
 					<div class="profile-image-container">
 						<img src="images/danny-hwang.jpg">
 					</div>
@@ -35,7 +38,7 @@
 					<h4>Frontend Engineer</h4>
 					<h4>Passionate Coder</h4>
 				</div>
-				<div class="right-home-container">
+				<div class="right-about-container">
 					<p>
 						Hello! My name is Danny Shyh Ru Hwang.
 					</p>
@@ -60,12 +63,7 @@
 					<p>
 						<b>Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
 					</p>
-					
-					
 				</div>
-			</div>
-			<div  class="about-container">
-
 			</div>
 			<div  class="project-container">
 
@@ -92,15 +90,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			console.log("Jquery ready");
 			var tStart = gsap.timeline();
 			tStart
 				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
 				.to(".profile-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 				.to(".profile-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".right-home-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
-				.to(".left-home-container h3", {opacity: 1, duration: 0.25})
-				.to(".left-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
+				.to(".right-about-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
+				.to(".left-about-container h3", {opacity: 1, duration: 0.25})
+				.to(".left-about-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
 				
 
 			tFirst = gsap.timeline();

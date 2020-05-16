@@ -85,6 +85,21 @@ body {
     z-index: -100;
 }
 
+.home-plane-object {
+    width: 100%;
+    max-width: 50px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: -50;
+    opacity: 0;
+    transform: rotate(10deg);
+}
+
+.home-plane-object img {
+    width: 100%;
+}
+
 .profile-home-image-container {
     width: 100%;
     text-align: center;

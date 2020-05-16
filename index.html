@@ -26,8 +26,9 @@
 		
 		<div class="master-inner-container">
 			<div id="home" class="home-container">
+				<div class="home-bg-container"></div>
 				<div class="main-home-container">
-					<div class="profile-home-image-container">
+					<div id="nav-trigger" class="profile-home-image-container">
 						<img src="images/danny-hwang.jpg">
 					</div>
 					<h3>Danny Hwang</h3>
@@ -96,56 +97,37 @@
 	<script>
 		$(document).ready(function(){
 
+			var tHome = gsap.timeline();
+			tHome
+				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, 0.25)
+				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
+				.to(".main-home-container h3", {opacity: 1, duration: 0.25})
+				.to(".main-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
+				.to(".main-home-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
+				.to(".home-container", {height: "auto", duration: 0.5}, "<")
+				.to(".home-bg-container", {opacity: 1, height: "100%", duration: 0.5}, ">")
+				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, ">")
+
+			var controller = new ScrollMagic.Controller();
+			var scene = new ScrollMagic.Scene({
+  				triggerElement: "#nav-trigger",
+  				triggerHook: 0
+			})
+  			.addIndicators({
+				colorTrigger: "white",
+				colorStart: "white",
+				colorEnd: "white",
+				indent: 5
+			})
+			.setTween(tFirst)
+			.addTo(controller);
+
 			tFirst = gsap.timeline();
 			tFirst
-				.to("nav", {backgroundColor: "navy", duration: 0.1}, 0.1)
+				.to(".nav-container", {backgroundColor: "navy", duration: 0.1}, 0.1)
 				.to(".nav-button-container", {color: "white", duration: 0.1}, "<")
 
-			var tStart = gsap.timeline();
-			tStart
-				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
-				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
-				.to(".main-home-container h3", {opacity: 1, duration: 0.25})
-				.to(".main-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
-			
-			var controller = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#first",
-  				triggerHook: 0
-			})
-  			.addIndicators({
-				colorTrigger: "white",
-				colorStart: "white",
-				colorEnd: "white",
-				indent: 5
-			})
-			.setTween(tFirst)
-			.addTo(controller);
-
-			var tStart = gsap.timeline();
-			tStart
-				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
-				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
-				.to(".main-home-container h3", {opacity: 1, duration: 0.25})
-				.to(".main-home-container h4", {opacity: 1, stagger: 0.25, duration: 0.5})
-
-			var controller = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#first",
-  				triggerHook: 0
-			})
-  			.addIndicators({
-				colorTrigger: "white",
-				colorStart: "white",
-				colorEnd: "white",
-				indent: 5
-			})
-			.setTween(tFirst)
-			.addTo(controller);
 		})
 	</script>
 </html>

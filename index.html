@@ -130,13 +130,12 @@
 				.to("#cloud-4", { left: "0%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
 				.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<");
 
-
 			tNav = gsap.timeline();
 			tNav
 				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})
 				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
 
-			var controller = new ScrollMagic.Controller();
+			var controllerNav = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
   				triggerElement: "#nav-trigger",
   				triggerHook: 0
@@ -148,19 +147,20 @@
 				indent: 5
 			})
 			.setTween(tNav)
-			.addTo(controller);
+			.addTo(controllerNav);
 
 			tAbout = gsap.timeline();
 			tAbout
 				.to(".about-container", {backgroundColor: "#31708e", duration: 0.5})
 				.to(".profile-about-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#5085a5", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".right-about-container", { opacity: 1, duration: 0.5}, ">")
 				.to(".right-about-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
-				.to(".left-about-container h3", { opacity: 1, duration: 0.5})
+				.to(".left-about-container h3", { opacity: 1, duration: 0.5},">")
 				.to(".left-about-container h4", { opacity: 1, stagger: 0.25, duration: 0.5})
-				.to(".left-about-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8fc1e3", color: "white",  duration: 0.5})
+				.to(".left-about-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
 
-			var controller = new ScrollMagic.Controller();
+			var controllerAbout = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
   				triggerElement: "#about-trigger",
   				triggerHook: 0.8,
@@ -173,7 +173,7 @@
 				indent: 5
 			})
 			.setTween(tAbout)
-			.addTo(controller);
+			.addTo(controllerAbout);
 
 			
 

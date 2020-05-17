@@ -247,12 +247,17 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 0;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: #8b9dc3;
 }
 
 .right-about-container p {
     width: 100%;
     margin-top: 0px;
     opacity: 0;
+    color: white;
     transform: translateX(200px);
 }
 

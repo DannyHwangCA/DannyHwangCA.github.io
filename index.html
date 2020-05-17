@@ -30,6 +30,11 @@
 				<div class="home-plane-object">
 					<img src="images/ufo.png">
 				</div>
+				<img id="cloud-1" class="cloud" src="images/cloud.png">
+				<img id="cloud-2" class="cloud" src="images/cloud.png">
+				<img id="cloud-3" class="cloud" src="images/cloud.png">
+				<img id="cloud-4" class="cloud" src="images/cloud.png">
+				<img id="cloud-5" class="cloud" src="images/cloud.png">
 				<div class="main-home-container">
 					<div class="profile-home-image-container">
 						<img src="images/danny-hwang.jpg">
@@ -113,8 +118,14 @@
 				.to(".home-bg-container", {opacity: 1, height: "100%", duration: 0.5}, ">")
 				.to(".home-plane-object", {rotation: -10, yoyo: true, ease: "power0", repeat: -1, duration: 0.5}, ">")
 				.to(".home-plane-object", {opacity: 1, duration:2}, "<")
+				.to(".cloud", {opacity: 1, stagger: 0.25, duration:2}, "<")
 				.to(".home-plane-object", { left: "90%", duration: 4, ease: "power0", yoyo: true, repeat: -1}, "<")
-			
+				.to("#cloud-1", { left: "80%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
+				.to("#cloud-2", { top: "12%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+				.to("#cloud-3", { top: "32%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+				.to("#cloud-4", { left: "0%", duration: 15, ease: "power0", yoyo: true, repeat: -1}, "<")
+				.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+
 			tFirst = gsap.timeline();
 			tFirst
 				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})

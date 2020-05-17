@@ -90,7 +90,7 @@ body {
     max-width: 50px;
     position: absolute;
     left: 0;
-    top: 40%;
+    top:60%;
     z-index: -50;
     opacity: 0;
     transform: rotate(10deg);
@@ -98,6 +98,56 @@ body {
 
 .home-plane-object img {
     width: 100%;
+}
+
+#cloud-1 {
+    width: 100%;
+    max-width: 150px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    opacity: 0;
+    z-index: -50;
+}
+
+#cloud-2 {
+    width: 100%;
+    max-width: 250px;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    opacity: 0;
+    z-index: -60;
+}
+
+#cloud-3 {
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    left: 70%;
+    top: 30%;
+    opacity: 0;
+    z-index: -70;
+}
+
+#cloud-4 {
+    width: 100%;
+    max-width: 100px;
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    opacity: 0;
+    z-index: -40;
+}
+
+#cloud-5 {
+    width: 100%;
+    max-width: 350px;
+    position: absolute;
+    left: 40%;
+    top: 0;
+    opacity: 0;
+    z-index: -90;
 }
 
 .profile-home-image-container {

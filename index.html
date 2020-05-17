@@ -9,19 +9,29 @@
 <body>
 	<div class="nav-container">
 		<button class="nav-button-container half-transition">
-			Home
+			<a id="" class="nav-link" href="#">
+				Home
+			</a>
 		</button>
 		<button class="nav-button-container half-transition">
-			My Info
+			<a id="my-info" class="nav-link" href="#">
+				My Info
+			</a>
 		</button>
 		<button class="nav-button-container half-transition">
-			About Site
+			<a id="" class="nav-link" href="#">
+				About Site
+			</a>
 		</button>
 		<button class="nav-button-container half-transition"> 
-			Projects
+			<a id="" class="nav-link" href="#">
+				Projects
+			</a>
 		</button>
 		<button class="nav-button-container half-transition"> 
-			Contact
+			<a id="" class="nav-link" href="#">
+				Contact
+			</a>
 		</button>
 	</div>
 	
@@ -48,7 +58,7 @@
 					<h4 id="home-sub-title-3"></h4>
 				</div>
 			</div>
-
+			<a name="myInfo"></a>
 			<div id="about-trigger" class="about-container">
 				<div class="about-inner-container">
 					<div class="left-about-container">
@@ -62,10 +72,12 @@
 					</div>
 					<div class="right-about-container">
 						<p>
-							Hello! My name is Danny Shyh Ru Hwang.
+							<b>
+								Hello! My name is Danny Shyh Ru Hwang.
+							</b>
 						</p>
 						<p>
-							I am a Senior Web Developer for Equilar, a financial technology company. I maintain, create, and update multiple web assets for Equilar.com, pardot, and our products.
+							I am a Frontend Engineer & Web Developer for <a href="https://www.equilar.com/" target="_blank">Equilar</a>, a financial technology company. I maintain, create, and update multiple web assets for Equilar.com, pardot, and our products.
 						</p>
 						<p>
 							I work closely with stakeholders in design, marketing, IT, products, and leadership to code responsive webpages and features that meets & exceed our myriad of business needs.
@@ -77,13 +89,13 @@
 							If you have any questions, please feel free to contact me!
 						</p>
 						<p>
-							<b>Email:</b> <a href="mailto:dannyhwangca@gmail.com">dannyhwangca@gmail.com</a>
+							<b class="gold-color">Email:</b> <a href="mailto:dannyhwangca@gmail.com" target="_blank">dannyhwangca@gmail.com</a>
 						</p>
 						<p>
-							<b>Phone:</b> <a href="teL:6262445621">(626) 244-5621</a>
+							<b class="gold-color">Phone:</b> <a href="teL:6262445621" target="_blank">(626) 244-5621</a>
 						</p>
 						<p>
-							<b>Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
+							<b class="gold-color">Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
 						</p>
 					</div>
 				</div>
@@ -109,6 +121,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
 	
 	<script>
+		function scrollToAnchor(aid){
+    		var aTag = $("a[name='"+ aid +"']");
+    		$('html,body').animate({scrollTop: (aTag.offset().top - $('.nav-container').height() + 1)},'slow');
+		}
+
+		$("#my-info").click(function() {
+   			scrollToAnchor('myInfo');
+		});
+
+
 		$(document).ready(function(){
 
 			var tHome = gsap.timeline();
@@ -135,7 +157,7 @@
 
 			tNav = gsap.timeline();
 			tNav
-				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})
+				.to(".nav-link", {color: "#dfe3ee", duration: 0.1})
 				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
 
 			var controllerNav = new ScrollMagic.Controller();

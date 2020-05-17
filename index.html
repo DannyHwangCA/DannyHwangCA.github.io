@@ -12,10 +12,10 @@
 			Home
 		</button>
 		<button class="nav-button-container half-transition">
-			Projects
+			About
 		</button>
 		<button class="nav-button-container half-transition"> 
-			About
+			Projects
 		</button>
 		<button class="nav-button-container half-transition"> 
 			Contact
@@ -126,11 +126,10 @@
 				.to("#cloud-4", { left: "0%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
 				.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
 
-			tFirst = gsap.timeline();
-			tFirst
+			tNav = gsap.timeline();
+			tNav
 				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})
 				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
-				
 
 			var controller = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
@@ -143,7 +142,26 @@
 				colorEnd: "white",
 				indent: 5
 			})
-			.setTween(tFirst)
+			.setTween(tNav)
+			.addTo(controller);
+
+			tAbout = gsap.timeline();
+			tAbout
+				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})
+				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
+
+			var controller = new ScrollMagic.Controller();
+			var scene = new ScrollMagic.Scene({
+  				triggerElement: "#nav-trigger",
+  				triggerHook: 0
+			})
+  			.addIndicators({
+				colorTrigger: "white",
+				colorStart: "white",
+				colorEnd: "white",
+				indent: 5
+			})
+			.setTween(tAbout)
 			.addTo(controller);
 
 			

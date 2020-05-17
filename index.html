@@ -24,7 +24,7 @@
 	
 	<div class="master-outer-container">
 		
-		<div class="master-inner-container">
+
 			<div id="home" class="home-container">
 				<div class="home-bg-container" id="nav-trigger"></div>
 				<div class="home-plane-object">
@@ -46,41 +46,43 @@
 				</div>
 			</div>
 
-			<div id="about" class="about-container">
-				<div class="left-about-container">
-					<div class="profile-about-image-container">
-						<img src="images/danny-hwang.jpg">
+			<div id="about-trigger" class="about-container">
+				<div class="about-inner-container">
+					<div class="left-about-container">
+						<div class="profile-about-image-container">
+							<img src="images/danny-hwang.jpg">
+						</div>
+						<h3>Danny Hwang</h3>
+						<h4>Web Developer</h4>
+						<h4>Frontend Engineer</h4>
+						<h4>Passionate Coder</h4>
 					</div>
-					<h3>Danny Hwang</h3>
-					<h4>Web Developer</h4>
-					<h4>Frontend Engineer</h4>
-					<h4>Passionate Coder</h4>
-				</div>
-				<div class="right-about-container">
-					<p>
-						Hello! My name is Danny Shyh Ru Hwang.
-					</p>
-					<p>
-						I am a Senior Web Developer for Equilar, a financial technology company. I maintain, create, and update multiple web assets for Equilar.com, pardot, and our products.
-					</p>
-					<p>
-						I work closely with stakeholders in design, marketing, IT, products, and leadership to code responsive webpages and features that meets & exceed our myriad of business needs.
-					</p>
-					<p>
-						My core coding skills include React.js, HTML5, CSS3, Javascript, & Jquery, however, I am always learning new languages and technologies.
-					</p>
-					<p>
-						If you have any questions, please feel free to contact me!
-					</p>
-					<p>
-						<b>Email:</b> <a href="mailto:dannyhwangca@gmail.com">dannyhwangca@gmail.com</a>
-					</p>
-					<p>
-						<b>Phone:</b> <a href="teL:6262445621">(626) 244-5621</a>
-					</p>
-					<p>
-						<b>Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
-					</p>
+					<div class="right-about-container">
+						<p>
+							Hello! My name is Danny Shyh Ru Hwang.
+						</p>
+						<p>
+							I am a Senior Web Developer for Equilar, a financial technology company. I maintain, create, and update multiple web assets for Equilar.com, pardot, and our products.
+						</p>
+						<p>
+							I work closely with stakeholders in design, marketing, IT, products, and leadership to code responsive webpages and features that meets & exceed our myriad of business needs.
+						</p>
+						<p>
+							My core coding skills include React.js, HTML5, CSS3, Javascript, & Jquery, however, I am always learning new languages and technologies.
+						</p>
+						<p>
+							If you have any questions, please feel free to contact me!
+						</p>
+						<p>
+							<b>Email:</b> <a href="mailto:dannyhwangca@gmail.com">dannyhwangca@gmail.com</a>
+						</p>
+						<p>
+							<b>Phone:</b> <a href="teL:6262445621">(626) 244-5621</a>
+						</p>
+						<p>
+							<b>Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
+						</p>
+					</div>
 				</div>
 			</div>
 
@@ -88,7 +90,6 @@
 
 			</div>
 			
-		</div>
 	</div>
 	
 </body>
@@ -109,16 +110,15 @@
 
 			var tHome = gsap.timeline();
 			tHome
-			.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
+				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
 				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".home-text-container p", {x:0, opacity: 1, duration: 0.25, stagger: 0.1}, "<")
 				.to("#home-title", 0.5, {opacity: 1, text:"Danny Hwang"})
 				.to("#home-sub-title-1", 0.5, {opacity: 1, text:"Web Developer"})
 				.to("#home-sub-title-2", 0.5, {opacity: 1, text:"Frontend Engineer"})
 				.to("#home-sub-title-3", 0.5, {opacity: 1, text:"Passionate Coder"})
 				.to(".main-home-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
-				.to(".home-container", {height: "auto", duration: 0.5}, "<")
+				.to(".home-container", { duration: 0.5}, "<")
 				.to(".home-bg-container", {opacity: 1, height: "100%", duration: 0.5}, ">")
 				.to(".home-plane-object", {rotation: -10, yoyo: true, ease: "power0", repeat: -1, duration: 0.5}, ">")
 				.to(".home-plane-object", {opacity: 1, duration:2}, "<")
@@ -142,9 +142,9 @@
   				triggerHook: 0
 			})
   			.addIndicators({
-				colorTrigger: "white",
-				colorStart: "white",
-				colorEnd: "white",
+				colorTrigger: "red",
+				colorStart: "red",
+				colorEnd: "red",
 				indent: 5
 			})
 			.setTween(tNav)
@@ -152,18 +152,22 @@
 
 			tAbout = gsap.timeline();
 			tAbout
-				.to(".nav-button-container", {color: "#dfe3ee", duration: 0.1})
-				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
-
+				.to(".about-container", {backgroundColor: "teal", duration: 0.5})
+				.to(".profile-about-image-container", {y: 0, opacity: 1, duration: 0.5})
+				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".left-about-container h3", { opacity: 1, duration: 0.5})
+				.to(".left-about-container h4", { opacity: 1, stagger: 0.25, duration: 0.5})
+				
 			var controller = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#nav-trigger",
-  				triggerHook: 0
+  				triggerElement: "#about-trigger",
+  				triggerHook: 0.8,
+				reverse: false
 			})
   			.addIndicators({
-				colorTrigger: "white",
-				colorStart: "white",
-				colorEnd: "white",
+				colorTrigger: "red",
+				colorStart: "red",
+				colorEnd: "red",
 				indent: 5
 			})
 			.setTween(tAbout)

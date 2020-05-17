@@ -12,7 +12,10 @@
 			Home
 		</button>
 		<button class="nav-button-container half-transition">
-			About
+			My Info
+		</button>
+		<button class="nav-button-container half-transition">
+			About Site
 		</button>
 		<button class="nav-button-container half-transition"> 
 			Projects
@@ -26,7 +29,7 @@
 		
 
 			<div id="home" class="home-container">
-				<div class="home-bg-container" id="nav-trigger"></div>
+				<div class="home-bg-container"></div>
 				<div class="home-plane-object">
 					<img src="images/ufo.png">
 				</div>
@@ -35,8 +38,8 @@
 				<img id="cloud-3" class="cloud" src="images/cloud.png">
 				<img id="cloud-4" class="cloud" src="images/cloud.png">
 				<img id="cloud-5" class="cloud" src="images/cloud.png">
-				<div class="main-home-container">
-					<div class="profile-home-image-container">
+				<div class="main-home-container" id="nav-trigger">
+					<div class="profile-home-image-container hvr-wobble-vertical">
 						<img src="images/danny-hwang.jpg">
 					</div>
 					<h3 id="home-title"></h3>
@@ -49,7 +52,7 @@
 			<div id="about-trigger" class="about-container">
 				<div class="about-inner-container">
 					<div class="left-about-container">
-						<div class="profile-about-image-container">
+						<div class="profile-about-image-container hvr-wobble-vertical">
 							<img src="images/danny-hwang.jpg">
 						</div>
 						<h3>Danny Hwang</h3>
@@ -153,11 +156,11 @@
 			tAbout
 				.to(".about-container", {backgroundColor: "#31708e", duration: 0.5})
 				.to(".profile-about-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#5085a5", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#f4f4f4", ease: "Back.easeInOut", duration: 1}, "<")
 				.to(".right-about-container", { opacity: 1, duration: 0.5}, ">")
 				.to(".right-about-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
-				.to(".left-about-container h3", { opacity: 1, duration: 0.5},">")
-				.to(".left-about-container h4", { opacity: 1, stagger: 0.25, duration: 0.5})
+				.to(".left-about-container h3", { display: "block", opacity: 1, duration: 0.5},">")
+				.to(".left-about-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
 				.to(".left-about-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
 
 			var controllerAbout = new ScrollMagic.Controller();

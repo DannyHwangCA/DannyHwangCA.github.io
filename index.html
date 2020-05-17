@@ -152,12 +152,14 @@
 
 			tAbout = gsap.timeline();
 			tAbout
-				.to(".about-container", {backgroundColor: "teal", duration: 0.5})
-				.to(".profile-about-image-container", {y: 0, opacity: 1, duration: 0.5})
-				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".about-container", {backgroundColor: "#31708e", duration: 0.5})
+				.to(".profile-about-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+				.to(".profile-about-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#5085a5", ease: "Back.easeInOut", duration: 1}, "<")
+				.to(".right-about-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
 				.to(".left-about-container h3", { opacity: 1, duration: 0.5})
 				.to(".left-about-container h4", { opacity: 1, stagger: 0.25, duration: 0.5})
-				
+				.to(".left-about-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8fc1e3", color: "white",  duration: 0.5})
+
 			var controller = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
   				triggerElement: "#about-trigger",

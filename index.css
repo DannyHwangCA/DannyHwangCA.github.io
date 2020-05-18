@@ -210,6 +210,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
+    position: relative;
 }
 
 .info-inner-container {
@@ -222,6 +223,24 @@ a {
     padding: 50px 15px 50px 15px;
     margin: 0 auto;
     cursor: default;
+}
+
+.firefly {
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+}
+
+.small-firefly {
+    width: 2px;
+    height: 2px;
+    animation: small-glow 1s infinite alternate;
+}
+
+.firefly-1 {
+    top: 10%; 
+    left: 20%;
 }
 
 .left-info-container {
@@ -345,9 +364,9 @@ a {
       -webkit-transform: translateY(0);
       transform: translateY(0);
     }
-  }
+}
 
-  @keyframes hvr-wobble-vertical {
+@keyframes hvr-wobble-vertical {
     16.65% {
       -webkit-transform: translateY(8px);
       transform: translateY(8px);
@@ -372,17 +391,17 @@ a {
       -webkit-transform: translateY(0);
       transform: translateY(0);
     }
-  }
+}
 
-  .hvr-wobble-vertical {
+.hvr-wobble-vertical {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
+}
 
-  .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
     -webkit-animation-name: hvr-wobble-vertical;
     animation-name: hvr-wobble-vertical;
     -webkit-animation-duration: 1s;
@@ -391,7 +410,16 @@ a {
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-  }
+}
+
+@keyframes small-glow {
+    from {
+      box-shadow: 0 0 10px -5px rgb(251, 255, 0);
+    }
+    to {
+      box-shadow: 0 0 10px 5px rgb(251, 255, 0);
+    }
+}
 
 .gold-color {
     color: #f9d71c;

@@ -7,11 +7,15 @@ body {
     margin: 0;
 }
 
-a {
+.general-link {
     font-weight: bold;
-    color:	#00274c;
+    color:	#8fc1e3;
     outline: none;
     text-decoration: none;
+}
+
+.general-link:hover {
+    color: #f9d71c;
 }
 
 .master-outer-container {

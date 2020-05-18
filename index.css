@@ -7,11 +7,14 @@ body {
     margin: 0;
 }
 
+a {
+    outline: none;
+    text-decoration: none;
+}
+
 .general-link {
     font-weight: bold;
     color:	#8fc1e3;
-    outline: none;
-    text-decoration: none;
 }
 
 .general-link:hover {

@@ -19,17 +19,17 @@
 			</a>
 		</button>
 		<button class="nav-button-container half-transition">
-			<a id="nav-about" class="nav-link" href="#">
+			<a id="nav-site" class="nav-link" href="#">
 				About Site
 			</a>
 		</button>
 		<button class="nav-button-container half-transition"> 
-			<a id="" class="nav-link" href="#">
+			<a id="nav-project" class="nav-link" href="#">
 				Projects
 			</a>
 		</button>
 		<button class="nav-button-container half-transition"> 
-			<a id="" class="nav-link" href="#">
+			<a id="nav-contact" class="nav-link" href="#">
 				Contact
 			</a>
 		</button>
@@ -38,7 +38,7 @@
 	<div class="master-outer-container">
 		
 			<a name="linkHome"></a>
-			<div id="home" class="home-container">
+			<div id="home-trigger" class="home-container">
 				<div class="home-bg-container"></div>
 				<div class="home-plane-object">
 					<img src="images/ufo.png">
@@ -89,19 +89,30 @@
 							If you have any questions, please feel free to contact me!
 						</p>
 						<p>
-							<b class="gold-color">Email:</b> <a href="mailto:dannyhwangca@gmail.com" target="_blank">dannyhwangca@gmail.com</a>
+							<b>Email:</b> <a href="mailto:dannyhwangca@gmail.com" target="_blank">dannyhwangca@gmail.com</a>
 						</p>
 						<p>
-							<b class="gold-color">Phone:</b> <a href="teL:6262445621" target="_blank">(626) 244-5621</a>
+							<b>Phone:</b> <a href="teL:6262445621" target="_blank">(626) 244-5621</a>
 						</p>
 						<p>
-							<b class="gold-color">Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
+							<b>Location:</b> Greater Los Angeles Area - Eastvale, CA 92880
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div id="project" class="project-container">
+			<a name="linkSite"></a>
+			<div id="site-trigger" class="site-container">
+
+			</div>
+
+			<a name="linkProject"></a>
+			<div id="project-trigger" class="project-container">
+
+			</div>
+
+			<a name="linkContact"></a>
+			<div id="contact-trigger" class="contact-container">
 
 			</div>
 			
@@ -134,6 +145,18 @@
    			scrollToAnchor('linkInfo');
 		});
 
+		$("#nav-site").click(function() {
+   			scrollToAnchor('linkSite');
+		});
+
+		$("#nav-project").click(function() {
+   			scrollToAnchor('linkProject');
+		});
+
+		$("#nav-contact").click(function() {
+   			scrollToAnchor('linkContact');
+		});
+
 		
 
 
@@ -163,7 +186,7 @@
 
 			tNav = gsap.timeline();
 			tNav
-				.to(".nav-link", {color: "#dfe3ee", duration: 0.1})
+				.to(".nav-link", {color: "#f4f4f4", duration: 0.1})
 				.to(".nav-container", {backgroundColor: "#3b5998", duration: 0.25}, "<")
 
 			var controllerNav = new ScrollMagic.Controller();
@@ -182,14 +205,14 @@
 
 			tAbout = gsap.timeline();
 			tAbout
-				.to(".info-container", {backgroundColor: "#31708e", duration: 0.5})
+				.to(".info-container", {opacity: 1, duration: 1})
 				.to(".profile-info-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 				.to(".profile-info-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#f4f4f4", ease: "Back.easeInOut", duration: 1}, "<")
 				.to(".right-info-container", { opacity: 1, duration: 0.5}, ">")
 				.to(".right-info-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
 				.to(".left-info-container h3", { display: "block", opacity: 1, duration: 0.5},">")
 				.to(".left-info-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
-				.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
+				.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#31708e", color: "white",  duration: 0.5})
 
 			var controllerAbout = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({

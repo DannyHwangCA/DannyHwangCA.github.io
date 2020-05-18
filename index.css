@@ -9,7 +9,7 @@ body {
 
 a {
     font-weight: bold;
-    color:#00274c;
+    color:	#00274c;
     outline: none;
     text-decoration: none;
 }
@@ -198,6 +198,11 @@ a {
 
 .info-container {
     width: 100%; 
+    background-image: url(images/info-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
 }
 
 .info-inner-container {
@@ -242,6 +247,7 @@ a {
     display: none;
     opacity: 0;
     text-align: center;  
+    color: white;
 }
 
 .left-info-container h3:hover {
@@ -254,6 +260,7 @@ a {
     opacity: 0;
     text-align: center;
     margin: 0px;
+    color: white;
 }
 
 .left-info-container h4:hover {
@@ -269,7 +276,7 @@ a {
     opacity: 0;
     border-radius: 5px;
     padding: 25px;
-    background-color: #8b9dc3;
+    background-color: #31708e;
 }
 
 .right-info-container p {
@@ -280,16 +287,30 @@ a {
     transform: translateX(200px);
 }
 
+.right-info-container:hover > p:hover {
+    color:#f9d71c;
+}
+
 .right-info-container p:last-child {
     margin-bottom: 0px;
 }
-
-
 
 .project-container {
     width: 100%;
     height: 600px;
     background: tan;
+}
+
+.site-container {
+    width: 100%;
+    height: 600px;
+    background: papayawhip;
+}
+
+.contact-container {
+    width: 100%;
+    height: 600px;
+    background: orange;
 }
 
 @-webkit-keyframes hvr-wobble-vertical {

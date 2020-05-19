@@ -211,6 +211,7 @@ a {
     background-size: cover;
     opacity: 0;
     position: relative;
+    z-index: -100;
 }
 
 .info-inner-container {
@@ -230,17 +231,18 @@ a {
     border-radius: 50%;
     position: absolute;
     background-color: white;
+    z-index: -50;
 }
 
 .small-firefly {
     width: 2px;
     height: 2px;
-    animation: small-glow 1s infinite alternate;
+    animation: small-glow 1s infinite alternate, up-down 10s infinite;
 }
 
 .firefly-1 {
     top: 10%; 
-    left: 20%;
+    left: 10%;
 }
 
 .left-info-container {
@@ -418,6 +420,54 @@ a {
     }
     to {
       box-shadow: 0 0 10px 5px rgb(251, 255, 0);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    10% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+    20% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    30% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+    40% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+
+    50% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    70% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+    80% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+    90% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px); 
     }
 }
 

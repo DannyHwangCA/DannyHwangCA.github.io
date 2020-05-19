@@ -64,6 +64,9 @@
 				<div class="firefly small-firefly firefly-go-right-short firefly-2"></div>
 				<div class="firefly small-firefly firefly-go-left-long firefly-3"></div>
 				<div class="firefly small-firefly firefly-go-left-short firefly-4"></div>
+				<div class="moon-container">
+					<img src="images/moon.png">
+				</div>
 				<div class="info-inner-container">
 					<div class="left-info-container">
 						<div class="profile-info-image-container hvr-wobble-vertical">
@@ -217,11 +220,12 @@
 				.to(".left-info-container h3", { display: "block", opacity: 1, duration: 0.5},">")
 				.to(".left-info-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
 				.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#31708e", color: "white",  duration: 0.5})
+				.to(".moon-container", {opacity:1, stagger: 0.25, duration: 0.5})
 				.to(".firefly", {opacity:1, stagger: 0.25, duration: 0.5})
-				.to(".firefly-go-right-long", {left:"90%", duration: 20, yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-left-long", {right:"90%", duration: 20, yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-right-short", {left:"90%", duration: 10, yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-left-short", {right:"90%", duration: 10, yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-right-long", {left:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-left-long", {right:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-right-short", {left:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-left-short", {right:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
 			
 			
 			var controllerAbout = new ScrollMagic.Controller();

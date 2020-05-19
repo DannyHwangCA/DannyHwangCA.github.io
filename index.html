@@ -60,7 +60,10 @@
 			</div>
 			<a name="linkInfo"></a>
 			<div id="info-trigger" class="info-container">
-				<div class="firefly small-firefly firefly-go-right firefly-1"></div>
+				<div class="firefly small-firefly firefly-go-right-long firefly-1"></div>
+				<div class="firefly small-firefly firefly-go-right-short firefly-2"></div>
+				<div class="firefly small-firefly firefly-go-left-long firefly-3"></div>
+				<div class="firefly small-firefly firefly-go-left-short firefly-4"></div>
 				<div class="info-inner-container">
 					<div class="left-info-container">
 						<div class="profile-info-image-container hvr-wobble-vertical">
@@ -215,7 +218,12 @@
 				.to(".left-info-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
 				.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#31708e", color: "white",  duration: 0.5})
 				.to(".firefly", {opacity:1, stagger: 0.25, duration: 0.5})
-				.to(".firefly-go-right", {left:"90%", duration: 20, yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-right-long", {left:"90%", duration: 20, yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-left-long", {right:"90%", duration: 20, yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-right-short", {left:"90%", duration: 10, yoyo: true, repeat: -1},"<")
+				.to(".firefly-go-left-short", {right:"90%", duration: 10, yoyo: true, repeat: -1},"<")
+			
+			
 			var controllerAbout = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
   				triggerElement: "#info-trigger",

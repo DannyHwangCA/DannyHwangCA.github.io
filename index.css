@@ -245,6 +245,21 @@ a {
     left: 10%;
 }
 
+.firefly-2 {
+    top: 50%; 
+    left: 10%;
+}
+
+.firefly-3 {
+    top: 30%; 
+    right: 10%;
+}
+
+.firefly-4 {
+    top: 70%; 
+    right: 10%;
+}
+
 .left-info-container {
     width: 35%;
     display: flex;

@@ -110,37 +110,60 @@
 
 			<a name="linkProject"></a>
 			<div id="project-trigger" class="outer-project-container">
-				<div class="inner-project-container">
-					<div class="search-input-container">
-					<h2> Seach Project Title Or Tag </h2>
-					<input 
-							class="form-control search-input" 
-							placeholder="Search Text"
-							v-model="searchTerm"
-					/>
+				<div id="app-container">
+					<div class="inner-app-container">
+					  <div class="search-input-container">
+						<div class="report-h1-container">
+							<h1>Reports</h1>
+						</div>
+						<div class="input-container">
+							<input 
+							   class="form-control search-input" 
+							   placeholder="Search Reports"
+							   v-model="searchTerm"
+							/>
+						</div>
+					  </div>
+					  <div class="report-container" 
+						   v-for="(item, index) in blogs"
+						   :key="index"
+					  >
+						<h2>
+						  <a :href="item.link">{{ item.title }}</a>
+						</h2>
+						<h3 v-if="item.title2">
+							<a :href="item.link">{{ item.title2 }}</a>
+						</h3>
+						<p>{{ item.date }}</p>
+						<div v-if="item.lock" class="lock-container">
+							<img class="lock-icon" src="images/icons/lock-icon.png">
+						  <a href="https://insight.equilar.com/app/login/login.jsp" target="_blank" class="lock-link">Login</a> |
+						  <a href="packages.html" class="lock-link">Subscribe</a>
+						</div>
+						<p v-html="item.description"></p>
+					  </div>
+					  <hr class="full">
+					  <div class="past-blog-container">
+						  <h2 class="margin_none">View Past Reports: <a href="https://www.equilar.com/reports.html">2019</a> | <a href="https://www.equilar.com/reports-archive#2018">2018</a></h2>
+					  </div>
+					  <hr class="full">
 					</div>
-					<div class="project-container" 
-						v-for="(item, index) in projects"
-						:key="index"
-					>
-					<h2>
-						<a :href="item.link">{{ item.title }}</a>
-					</h2>
-					<p>{{ item.date }}</p>
-					<p>{{ item.description }}</p>
-					<div class="btn-position">
-						<a :href="item.link" class="btn btn-outline-dark">Read more <i class="fas fa-external-link-alt"></i></a> 
-					</div>
-					</div>
-				</div>
+				  </div>
 			</div>
 
 			<a name="linkSite"></a>
 			<div id="site-trigger" class="site-container">
 				This is a highly stylized site meant to showcase some of my frontend skills.
 
-				Technologies Used:
-				HTML5, CSS3 (keyframes, hover, pseudo elements ), GSAP, Jquery (selectors, DOM state ), ScrollMagic (triggers, hooks, GSAP integration) 
+				Techniques Used:
+				HTML5, 
+				CSS3 (keyframes, hover, pseudo elements ), 
+				GSAP, 
+				Jquery (selectors, DOM state ), 
+				ScrollMagic (triggers, hooks, GSAP integration),
+				Javascript (fetch),
+				JSON data parse
+				Vue.js (search logic, templating)
 			</div>
 
 			<a name="linkContact"></a>
@@ -189,6 +212,40 @@
 		$("#nav-contact").click(function() {
    			scrollToAnchor('linkContact');
 		});
+
+		var data = {
+			blogs: null,
+			saved: null,
+			searchTerm: ''
+		}	
+
+		fetch("jsons/report.json")
+			.then(res => res.json() )
+			.then( function(results){
+				data.blogs = results;
+				data.saved = results;
+			}).then( function*(){
+				$("#app-container").show();
+			})
+		
+		var app = new Vue({
+			el: '#app-container',
+			data : data, 
+			watch: {
+				searchTerm: function(){
+				var searching = this.searchTerm;
+				var blogArray = this.saved.filter( blog => {
+					return (
+					blog.title.toLowerCase().match(searching.toLowerCase()) ||
+					blog.description.toLowerCase().match(searching.toLowerCase()) 
+					)
+				}
+				);
+				this.blogs = blogArray;
+				}
+			} 
+		});
+
 
 		$(document).ready(function(){
 

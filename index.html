@@ -118,7 +118,7 @@
 						<div class="input-container">
 							<input 
 								class="form-control search-input" 
-								placeholder="Search Reports"
+								placeholder="Search Projects"
 								v-model="searchTerm"
 							/>
 						</div>
@@ -127,23 +127,19 @@
 						v-for="(item, index) in blogs"
 						:key="index"
 					>
-					<h2>
-						<a :href="item.link">{{ item.title }}</a>
-					</h2>
-					<h3 v-if="item.title2">
-						<a :href="item.link">{{ item.title2 }}</a>
-					</h3>
-					<p>{{ item.date }}</p>
-					<div v-if="item.lock" class="lock-container">
-						<img class="lock-icon" src="images/icons/lock-icon.png">
-						<a href="https://insight.equilar.com/app/login/login.jsp" target="_blank" class="lock-link">Login</a> |
-						<a href="packages.html" class="lock-link">Subscribe</a>
-					</div>
-					<p v-html="item.description"></p>
-					</div>
-					<hr class="full">
-					<div class="past-blog-container">
-						<h2 class="margin_none">View Past Reports: <a href="https://www.equilar.com/reports.html">2019</a> | <a href="https://www.equilar.com/reports-archive#2018">2018</a></h2>
+						<h2>
+							<a :href="item.link">{{ item.title }}</a>
+						</h2>
+						<h3 v-if="item.title2">
+							<a :href="item.link">{{ item.title2 }}</a>
+						</h3>
+						<p>{{ item.date }}</p>
+						<div v-if="item.lock" class="lock-container">
+							<img class="lock-icon" src="images/icons/lock-icon.png">
+							<a href="https://insight.equilar.com/app/login/login.jsp" target="_blank" class="lock-link">Login</a> |
+							<a href="packages.html" class="lock-link">Subscribe</a>
+						</div>
+						<p v-html="item.description"></p>
 					</div>
 					<hr class="full">
 				</div>
@@ -217,7 +213,7 @@
 			searchTerm: ''
 		}	
 
-		fetch("jsons/report.json")
+		fetch("jsons/projects.json")
 			.then(res => res.json() )
 			.then( function(results){
 				data.blogs = results;

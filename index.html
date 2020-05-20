@@ -110,45 +110,43 @@
 
 			<a name="linkProject"></a>
 			<div id="project-trigger" class="outer-project-container">
-				<div id="app-container">
-					<div class="inner-app-container">
-					  <div class="search-input-container">
+				<div id="inner-project-container" class="inner-project-container">
+					<div class="search-input-container">
 						<div class="report-h1-container">
 							<h1>Reports</h1>
 						</div>
 						<div class="input-container">
 							<input 
-							   class="form-control search-input" 
-							   placeholder="Search Reports"
-							   v-model="searchTerm"
+								class="form-control search-input" 
+								placeholder="Search Reports"
+								v-model="searchTerm"
 							/>
 						</div>
-					  </div>
-					  <div class="report-container" 
-						   v-for="(item, index) in blogs"
-						   :key="index"
-					  >
-						<h2>
-						  <a :href="item.link">{{ item.title }}</a>
-						</h2>
-						<h3 v-if="item.title2">
-							<a :href="item.link">{{ item.title2 }}</a>
-						</h3>
-						<p>{{ item.date }}</p>
-						<div v-if="item.lock" class="lock-container">
-							<img class="lock-icon" src="images/icons/lock-icon.png">
-						  <a href="https://insight.equilar.com/app/login/login.jsp" target="_blank" class="lock-link">Login</a> |
-						  <a href="packages.html" class="lock-link">Subscribe</a>
-						</div>
-						<p v-html="item.description"></p>
-					  </div>
-					  <hr class="full">
-					  <div class="past-blog-container">
-						  <h2 class="margin_none">View Past Reports: <a href="https://www.equilar.com/reports.html">2019</a> | <a href="https://www.equilar.com/reports-archive#2018">2018</a></h2>
-					  </div>
-					  <hr class="full">
 					</div>
-				  </div>
+					<div class="report-container" 
+						v-for="(item, index) in blogs"
+						:key="index"
+					>
+					<h2>
+						<a :href="item.link">{{ item.title }}</a>
+					</h2>
+					<h3 v-if="item.title2">
+						<a :href="item.link">{{ item.title2 }}</a>
+					</h3>
+					<p>{{ item.date }}</p>
+					<div v-if="item.lock" class="lock-container">
+						<img class="lock-icon" src="images/icons/lock-icon.png">
+						<a href="https://insight.equilar.com/app/login/login.jsp" target="_blank" class="lock-link">Login</a> |
+						<a href="packages.html" class="lock-link">Subscribe</a>
+					</div>
+					<p v-html="item.description"></p>
+					</div>
+					<hr class="full">
+					<div class="past-blog-container">
+						<h2 class="margin_none">View Past Reports: <a href="https://www.equilar.com/reports.html">2019</a> | <a href="https://www.equilar.com/reports-archive#2018">2018</a></h2>
+					</div>
+					<hr class="full">
+				</div>
 			</div>
 
 			<a name="linkSite"></a>
@@ -229,7 +227,7 @@
 			})
 		
 		var app = new Vue({
-			el: '#app-container',
+			el: '#inner-project-container',
 			data : data, 
 			watch: {
 				searchTerm: function(){

@@ -113,12 +113,12 @@
 				<div id="inner-project-container" class="inner-project-container">
 					<div class="search-input-container">
 						<div class="report-h1-container">
-							<h1>Reports</h1>
+							<h1>My Projects</h1>
 						</div>
 						<div class="input-container">
 							<input 
 								class="form-control search-input" 
-								placeholder="Search Projects"
+								placeholder="Search Project Titles & Tags"
 								v-model="searchTerm"
 							/>
 						</div>
@@ -130,9 +130,6 @@
 						<h2>
 							<a :href="item.link">{{ item.title }}</a>
 						</h2>
-						<h3 v-if="item.title2">
-							<a :href="item.link">{{ item.title2 }}</a>
-						</h3>
 						<p>{{ item.date }}</p>
 						<div v-if="item.lock" class="lock-container">
 							<img class="lock-icon" src="images/icons/lock-icon.png">
@@ -221,6 +218,43 @@
 			}).then( function*(){
 				$("#app-container").show();
 			})
+
+		data.blogs = 
+		[
+    {
+      "title":"Equilar 100: The Highest-Paid CEOs at the Largest U.S. Companies",
+      "link": "https://www.equilar.com/reports/72-highest-paid-ceos-2020-equilar-100.html",
+      "lock" : "",
+      "date"  : "April 23, 2020",
+      "description" : "The annual Equilar 100 study examines CEO compensation at the largest companies by revenue that filed an annual proxy statement before March 31."
+    },
+    {
+      "title":"Executive Long-Term Incentive Plans",
+      "link": "https://info.equilar.com/2435-2020-ltip",
+      "lock" : "true",
+      "date"  : "April 16, 2020",
+      "description" : "<i>Executive Long-Term Incentive Plans</i>, an Equilar publication, examines trends in incentive plan design at Equilar 500 companies over the last five fiscal years. The report analyzes performance metrics and periods associated with long-term awards granted to NEOs, particularly CEOs and CFOs. E*TRADE Corporate Services provided independent commentary on the structure of incentive plan design, particularly in light of the current environment."
+    }
+]
+
+	data.saved = [
+    {
+      "title":"Equilar 100: The Highest-Paid CEOs at the Largest U.S. Companies",
+      "title2": "Pay Trends Before the COVID-19 Pandemic",
+      "link": "https://www.equilar.com/reports/72-highest-paid-ceos-2020-equilar-100.html",
+      "lock" : "",
+      "date"  : "April 23, 2020",
+      "description" : "The annual Equilar 100 study examines CEO compensation at the largest companies by revenue that filed an annual proxy statement before March 31."
+    },
+    {
+      "title":"Executive Long-Term Incentive Plans",
+      "title2": "",
+      "link": "https://info.equilar.com/2435-2020-ltip",
+      "lock" : "true",
+      "date"  : "April 16, 2020",
+      "description" : "<i>Executive Long-Term Incentive Plans</i>, an Equilar publication, examines trends in incentive plan design at Equilar 500 companies over the last five fiscal years. The report analyzes performance metrics and periods associated with long-term awards granted to NEOs, particularly CEOs and CFOs. E*TRADE Corporate Services provided independent commentary on the structure of incentive plan design, particularly in light of the current environment."
+    }
+]
 		
 		var app = new Vue({
 			el: '#inner-project-container',

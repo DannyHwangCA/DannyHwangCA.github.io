@@ -363,11 +363,16 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: warp;
+    flex-wrap: wrap;
+    margin: 50px auto;
 }
 
 .search-input-container {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .report-h1-container {
@@ -381,9 +386,25 @@ a {
 
 .input-container {
     width: 100%;
+    margin-top: 15px;
 }
 
-.
+.input-container input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.report-container {
+    width: 100%;
+    border: 1px solid #31708e;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 15px;
+    padding: 0px 10px;
+}
 
 .site-container {
     width: 100%;

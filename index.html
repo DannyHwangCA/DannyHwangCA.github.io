@@ -144,7 +144,7 @@
 						</h3>
 						<p>{{ item.date }}</p>
 						<p v-html="item.description"></p>
-						<div v-html>
+						<div v-if="item.embed">
 							{{item.embed}}
 						</div>
 					</div>
@@ -237,16 +237,18 @@
       "type": "Codepen",
       "image" : "images/cloud.png",
       "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props."
-    },
+      "description" : "A React project that uses value from an input to pass information between states & props.",
+			"embed" : "true"
+	},
 	{
       "title":"React Customize SVG",
 	  "title2": "Props, State, Event Handling",
       "type": "Codepen",
       "image" : "images/cloud.png",
       "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props."
-    }
+      "description" : "A React project that uses value from an input to pass information between states & props.",
+	  "embed" : "true"
+	}
 ]
 
 	data.saved = [
@@ -256,16 +258,18 @@
       "type": "Codepen",
       "image" : "images/cloud.png",
       "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props."
-    },
+      "description" : "A React project that uses value from an input to pass information between states & props.",
+	  "embed" : "true"
+	},
 	{
       "title":"React Customize SVG",
 	  "title2": "Props, State, Event Handling",
       "type": "Codepen",
       "image" : "images/cloud.png",
       "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props."
-    }
+      "description" : "A React project that uses value from an input to pass information between states & props.",
+	  "embed" : "true"
+	}
 ]
 		
 		var app = new Vue({

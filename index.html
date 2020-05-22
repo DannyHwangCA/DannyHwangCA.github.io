@@ -112,7 +112,7 @@
 			<div id="project-trigger" class="outer-project-container">
 				<div id="inner-project-container" class="inner-project-container">
 					<div class="search-input-container">
-						<div class="report-h1-container">
+						<div class="project-h1-container">
 							<h1>My Projects</h1>
 						</div>
 						<div class="input-container">
@@ -131,6 +131,8 @@
 						<div class="project-type-container">
 							<div :class="item.type">
 								<h2>{{item.type}}</h2>
+								<i class="fas fa-external-link-square-alt"></i>
+								<i class="fas fa-expand-arrows-alt"></i>
 							</div>
 						</div>
 						<div v-if="item.embed">
@@ -138,12 +140,12 @@
 							</p>
 						</div>
 						<div v-else class="project-image-container">
-							<a :href="item.link">
+							<a :href="item.link" target="_blank">
 								<img :src="item.image">
 							</a>
 						</div>
 						<h2>
-							<a :href="item.link">{{ item.title }}</a>
+							<a :href="item.link" target="_blank">{{ item.title }}</a>
 						</h2>
 						<h3>
 							{{item.title2}}
@@ -167,8 +169,8 @@
 				GSAP, 
 				Jquery (selectors, DOM state ), 
 				ScrollMagic (triggers, hooks, GSAP integration),
-				Javascript (fetch),
-				JSON data parse
+				FontAwesome,
+				Javascript (fetch, promise, JSON parsing),
 				Vue.js (search logic, templating)
 			</div>
 
@@ -192,7 +194,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 	<script>

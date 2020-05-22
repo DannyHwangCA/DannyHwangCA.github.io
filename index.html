@@ -123,15 +123,21 @@
 							/>
 						</div>
 					</div>
+					<div class="project-outer-container">
 					<div class="project-container" 
 						v-for="(item, index) in project"
 						:key="index"
 					>
-						<div>
-							<h2>{{item.type}}</h2>
+						<div class="project-type-container">
+							<div :class="item.type">
+								<h2>{{item.type}}</h2>
+							</div>
 						</div>
-						
-						<div class="project-image-container">
+						<div v-if="item.embed">
+							<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+							</p>
+						</div>
+						<div v-else class="project-image-container">
 							<a :href="item.link">
 								<img :src="item.image">
 							</a>
@@ -144,9 +150,8 @@
 						</h3>
 						<p>{{ item.date }}</p>
 						<p v-html="item.description"></p>
-						<div v-if="item.embed">
-							{{item.embed}}
-						</div>
+						
+					</div>
 					</div>
 					<hr class="full">
 				</div>
@@ -188,6 +193,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 	
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 	<script>
 		function scrollToAnchor(aid){
     		var aTag = $("a[name='"+ aid +"']");
@@ -231,46 +238,51 @@
 
 		data.project = 
 		[
-		{
-      "title":"React Customize SVG",
-	  "title2": "Props, State, Event Handling",
-      "type": "Codepen",
-      "image" : "images/cloud.png",
-      "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props.",
-			"embed" : "true"
-	},
-	{
-      "title":"React Customize SVG",
-	  "title2": "Props, State, Event Handling",
-      "type": "Codepen",
-      "image" : "images/cloud.png",
-      "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props.",
-	  "embed" : "true"
-	}
-]
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"image" : "images/cloud.png",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			},
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"image" : "images/cloud.png",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			}
+		]
 
-	data.saved = [
-    {
-      "title":"React Customize SVG",
-	  "title2": "Props, State, Event Handling",
-      "type": "Codepen",
-      "image" : "images/cloud.png",
-      "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props.",
-	  "embed" : "true"
-	},
-	{
-      "title":"React Customize SVG",
-	  "title2": "Props, State, Event Handling",
-      "type": "Codepen",
-      "image" : "images/cloud.png",
-      "link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-      "description" : "A React project that uses value from an input to pass information between states & props.",
-	  "embed" : "true"
-	}
-]
+		data.saved = 
+		[
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"image" : "images/cloud.png",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			},
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"image" : "images/cloud.png",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			}
+		]
 		
 		var app = new Vue({
 			el: '#inner-project-container',
@@ -289,7 +301,6 @@
 				}
 			} 
 		});
-
 
 		$(document).ready(function(){
 

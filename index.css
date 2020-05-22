@@ -397,17 +397,38 @@ a {
     padding: 5px 10px;
 }
 
+.project-outer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .project-container {
-    width: 100%;
+    width: 48%;
     border: 1px solid #31708e;
     border-radius: 5px;
     background-color: white;
     margin-top: 15px;
     padding: 0px 10px;
-    -webkit-transition: background-color 500ms ease-out 1s;
-    -moz-transition: background-color 500ms ease-out 1s;
-    -o-transition: background-color 500ms ease-out 1s;
-    transition: background-color 500ms ease-out 1s;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.project-type-container {
+    width: 100%;
+}
+
+.project-type-container h2 {
+    color: white;
+    padding: 5px;
+}
+
+.Codepen {
+    background-color: red;
+    border-radius: 5px;
 }
 
 .project-image-container img {

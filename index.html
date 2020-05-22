@@ -123,8 +123,8 @@
 							/>
 						</div>
 					</div>
-					<div class="report-container" 
-						v-for="(item, index) in blogs"
+					<div class="project-container" 
+						v-for="(item, index) in project"
 						:key="index"
 					>
 						<div>
@@ -215,7 +215,7 @@
 		});
 
 		var data = {
-			blogs: null,
+			project: null,
 			saved: null,
 			searchTerm: ''
 		}	
@@ -223,13 +223,13 @@
 		fetch("jsons/projects.json")
 			.then(res => res.json() )
 			.then( function(results){
-				data.blogs = results;
+				data.project = results;
 				data.saved = results;
 			}).then( function*(){
 				$("#app-container").show();
 			})
 
-		data.blogs = 
+		data.project = 
 		[
 		{
       "title":"React Customize SVG",
@@ -285,7 +285,7 @@
 					)
 				}
 				);
-				this.blogs = blogArray;
+				this.project = blogArray;
 				}
 			} 
 		});

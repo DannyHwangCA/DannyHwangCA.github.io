@@ -397,13 +397,17 @@ a {
     padding: 5px 10px;
 }
 
-.report-container {
+.project-container {
     width: 100%;
     border: 1px solid #31708e;
     border-radius: 5px;
     background-color: white;
     margin-top: 15px;
     padding: 0px 10px;
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition: background-color 500ms ease-out 1s;
 }
 
 .project-image-container img {

@@ -422,12 +422,14 @@ a {
 }
 
 .project-type-container h2 {
-    color: white;
+    float: left;
+    color: black;
     padding: 5px;
 }
 
-.project-type-container i {
+.project-type-container svg {
     float: right;
+    font-size: 35px;    
 }
 
 .Codepen {

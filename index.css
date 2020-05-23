@@ -422,19 +422,30 @@ a {
 }
 
 .project-type-container h2 {
-    float: left;
-    color: black;
+    color: white;
     padding: 5px;
+    margin: 0px;
 }
 
 .project-type-container svg {
-    float: right;
+    color: white;
     font-size: 35px;    
+    margin-left: 5px;
+}
+
+.project-type-container svg:hover {
+    color: orange;
 }
 
 .Codepen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: red;
     border-radius: 5px;
+    margin: 15px 0px;
+    padding: 5px 0;
 }
 
 .project-image-container img {

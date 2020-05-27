@@ -124,7 +124,7 @@
 						</div>
 					</div>
 					<div class="project-outer-container">
-					<div class="project-container" 
+					<div class="project-container codepen-container" 
 						v-for="(item, index) in project"
 						:key="index"
 					>
@@ -133,14 +133,15 @@
 								<a :href="item.link" target="_blank">
 									<h2>{{item.type}}</h2>
 								</a>
-								<i class="fas fa-expand-arrows-alt"></i>
+								<i class="fas fa-expand-arrows-alt codepen-expand"></i>
+								<i class="fas fa-compress-arrows-alt codepen-shrink"></i>
 								<a :href="item.link" target="_blank">
 									<i class="fas fa-external-link-square-alt"></i>
 								</a>
 							</div>
 						</div>
 						<div v-if="item.embed">
-							<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+							<p class="codepen"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 							</p>
 						</div>
 						<div v-else class="project-image-container">
@@ -384,7 +385,19 @@
 			.setTween(tAbout)
 			.addTo(controllerAbout);
 
-			
+			$(".codepen-expand").on("click", function(){
+				$(".codepen-container").addClass("project-expand");
+				$(".cp_embed_iframe").css("height", "100vh")
+				$(".codepen-expand").hide();
+				$(".codepen-shrink").show();
+			});
+
+			$(".codepen-shrink").on("click", function(){
+				$(".codepen-container").removeClass("project-expand");
+				$(".cp_embed_iframe").css("height", "auto")
+				$(".codepen-shrink").hide();
+				$(".codepen-expand").show();
+			});
 
 		})
 	</script>

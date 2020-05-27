@@ -359,7 +359,7 @@ a {
 
 .inner-project-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -427,6 +427,10 @@ a {
     margin: 0px;
 }
 
+.project-type-container h2:hover {
+    color: #8fc1e3;
+}
+
 .project-type-container svg {
     color: white;
     font-size: 35px;    
@@ -438,10 +442,10 @@ a {
     color: #8fc1e3;
 }
 
-.project-type-container h2:hover {
-    color: #8fc1e3;
-}
 
+.codepen-shrink {
+    display: none;
+}
 
 .Codepen {
     display: flex;
@@ -611,6 +615,10 @@ a {
 
 .gold-color {
     color: #f9d71c;
+}
+
+.project-expand {
+    width: 100%;
 }
 
 .half-transition {

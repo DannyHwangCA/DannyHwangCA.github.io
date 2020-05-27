@@ -359,7 +359,7 @@ a {
 
 .inner-project-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;

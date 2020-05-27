@@ -431,6 +431,7 @@ a {
     color: white;
     font-size: 35px;    
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .project-type-container svg:hover {

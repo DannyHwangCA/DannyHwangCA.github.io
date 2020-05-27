@@ -435,15 +435,20 @@ a {
 }
 
 .project-type-container svg:hover {
-    color: orange;
+    color: #8fc1e3;
 }
+
+.project-type-container h2:hover {
+    color: #8fc1e3;
+}
+
 
 .Codepen {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: red;
+    background-color: #31708e;
     border-radius: 5px;
     margin: 15px 0px;
     padding: 5px 0;

@@ -124,7 +124,7 @@
 						</div>
 					</div>
 					<div class="project-outer-container">
-					<div class="project-container codepen-container" 
+					<div class="project-container" 
 						v-for="(item, index) in project"
 						:key="index"
 					>
@@ -140,8 +140,8 @@
 								</a>
 							</div>
 						</div>
-						<div v-if="item.embed">
-							<p class="codepen"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+						<div class="codepen-wrapper" v-if="item.embed">
+							<p class="codepen" data-height="250"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 							</p>
 						</div>
 						<div v-else class="project-image-container">
@@ -386,17 +386,23 @@
 			.addTo(controllerAbout);
 
 			$(".codepen-expand").on("click", function(){
-				$(".codepen-container").addClass("project-expand");
-				$(".cp_embed_iframe").css("height", "100vh")
-				$(".codepen-expand").hide();
-				$(".codepen-shrink").show();
+				var targetParent = $(this).parents(".project-container");
+				var targetSibling = $(this).siblings(".codepen-shrink");
+				var targetCodepen = $(targetParent).children(".codepen-wrapper").children().children();
+				$(targetParent).addClass("project-expand");
+				$(targetCodepen).css("height", "100vh")
+				$(this).hide();
+				$(targetSibling).show();
 			});
 
 			$(".codepen-shrink").on("click", function(){
-				$(".codepen-container").removeClass("project-expand");
-				$(".cp_embed_iframe").css("height", "auto")
-				$(".codepen-shrink").hide();
-				$(".codepen-expand").show();
+				var targetParent = $(this).parents(".project-container");
+				var targetSibling = $(this).siblings(".codepen-shrink");
+				var targetCodepen = $(targetParent).children(".codepen-wrapper").children().children();
+				$(targetParent).removeClass("project-expand");
+				$(targetCodepen).css("height", "250")
+				$(this).hide();
+				$(targetSibling).show();
 			});
 
 		})

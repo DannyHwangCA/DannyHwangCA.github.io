@@ -138,6 +138,12 @@
 								<a :href="item.link" target="_blank">
 									<i class="fas fa-external-link-square-alt"></i>
 								</a>
+								<div class="codepen-modal">
+									<div class="codepen-wrapper" v-if="item.embed">
+										<p class="codepen" data-height="250"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+										</p>
+									</div>
+								</div>	
 							</div>
 						</div>
 						<div class="codepen-wrapper" v-if="item.embed">
@@ -378,23 +384,15 @@
 			.addTo(controllerAbout);
 
 			$(".codepen-expand").on("click", function(){
-				var targetParent = $(this).parents(".project-container");
-				var targetSibling = $(this).siblings(".codepen-shrink");
-				var targetCodepen = $(targetParent).children(".codepen-wrapper").children().children();
-				$(targetParent).addClass("project-expand");
-				$(targetCodepen).css("height", "100vh")
-				$(this).hide();
-				$(targetSibling).show();
+				targetModal = $(this).siblings(".codepen-modal")
+				$(targetModal).fadeIn();
+				$(".project-container").addClass("project-expand");
+				$(".cp_embed_iframe").css({"height":"100vh","width":"80%","width":"80%" })
 			});
 
 			$(".codepen-shrink").on("click", function(){
-				var targetParent = $(this).parents(".project-container");
-				var targetSibling = $(this).siblings(".codepen-expand");
-				var targetCodepen = $(targetParent).children(".codepen-wrapper").children().children();
-				$(targetParent).removeClass("project-expand");
-				$(targetCodepen).css("height", "250")
-				$(this).hide();
-				$(targetSibling).show();
+				$(".project-container").removeClass("project-expand");
+				$(".cp_embed_iframe ").css("height", "250")
 			});
 
 		})

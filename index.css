@@ -470,12 +470,15 @@ a {
     position: relative;
     width: 80%;
     margin: 0 auto;
+    padding-top: 10px;
+}
+
+.codepen-close-info {
+    float: left;
 }
 
 .codepen-close {
-    position: absolute;
-    top: 5px;
-    right: 0;
+    float: right;
     font-size: 40px !important; 
     animation: moon-glow 4s infinite;
 }

@@ -139,6 +139,11 @@
 								</a>
 								<div class="codepen-modal" v-if="item.embed">
 									<div class="master-codepen-wrapper">
+										<div class="codepen-close-info">
+											<h2>
+												Press "ESC" or Close Button to Exit!
+											</h2>
+										</div>
 										<i class="fas fa-window-close codepen-close"></i>
 										<div class="codepen-wrapper" >
 											<p class="codepen" data-height="250"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
@@ -386,14 +391,16 @@
 			.addTo(controllerAbout);
 
 			$(".codepen-expand").on("click", function(){
-				targetModal = $(this).siblings(".codepen-modal")
+				targetModal = $(this).siblings(".codepen-modal");
 				$(targetModal).fadeIn();
-				$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto","padding-top": "50px;" })
+				$(".codepen-wrapper").css("padding-top", "50px");
+				$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto"})
 			});
 
 			$(".codepen-close").on("click", function(){
 				$(".codepen-modal").hide();
-				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto","padding-top": "50px;"})
+				$(".codepen-wrapper").css("padding-top", "0px");
+				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
 			});
 
 		})

@@ -251,46 +251,38 @@
 				"type": "Codepen",
 				"embed" : "true",
 				"codepenid": "VwLOqya",
-				"image" : "images/cloud.png",
 				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
 				"description" : "A React project that uses value from an input to pass information between states & props."
 			},
 			{
-				"title":"React Customize SVG",
-				"title2": "Props, State, Event Handling",
+				"title":"Title & Text Search",
+				"title2": "Vue JS, V-model, V-for, Filter",
 				"type": "Codepen",
 				"embed" : "true",
-				"codepenid": "VwLOqya",
-				"image" : "images/cloud.png",
-				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-				"description" : "A React project that uses value from an input to pass information between states & props."
+				"codepenid": "LYVadRo",
+				"link": "https://codepen.io/dannyhwangca/full/LYVadRo",
+				"description" : "A Vue JS searchbar that uses v-model to filter title and description text on key press."
+			},
+			{
+				"title":"Sort, Drag, & Tag List",
+				"title2": "JQuery, CSS3",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "MvNwbP",
+				"link": "https://codepen.io/dannyhwangca/full/MvNwbP",
+				"description" : "A Sortable, Draggable, & Taggable list using JQuery, JQuery UI, and CSS3."
+			},
+			{
+				"title":"Sliding Banners",
+				"title2": "GSAP, Tweening",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "xLzzoq",
+				"link": "https://codepen.io/dannyhwangca/full/xLzzoq",
+				"description" : "Using GSAP & Tweenlite to create a sliding banner concept."
 			}
 		]
 
-		data.saved = 
-		[
-			{
-				"title":"React Customize SVG",
-				"title2": "Props, State, Event Handling",
-				"type": "Codepen",
-				"embed" : "true",
-				"codepenid": "VwLOqya",
-				"image" : "images/cloud.png",
-				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-				"description" : "A React project that uses value from an input to pass information between states & props."
-			},
-			{
-				"title":"React Customize SVG",
-				"title2": "Props, State, Event Handling",
-				"type": "Codepen",
-				"embed" : "true",
-				"codepenid": "VwLOqya",
-				"image" : "images/cloud.png",
-				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
-				"description" : "A React project that uses value from an input to pass information between states & props."
-			}
-		]
-		
 		var app = new Vue({
 			el: '#inner-project-container',
 			data : data, 
@@ -397,7 +389,7 @@
 
 			$(".codepen-shrink").on("click", function(){
 				var targetParent = $(this).parents(".project-container");
-				var targetSibling = $(this).siblings(".codepen-shrink");
+				var targetSibling = $(this).siblings(".codepen-expand");
 				var targetCodepen = $(targetParent).children(".codepen-wrapper").children().children();
 				$(targetParent).removeClass("project-expand");
 				$(targetCodepen).css("height", "250")

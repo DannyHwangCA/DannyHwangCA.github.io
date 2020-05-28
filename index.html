@@ -134,14 +134,16 @@
 									<h2>{{item.type}}</h2>
 								</a>
 								<i class="fas fa-expand-arrows-alt codepen-expand"></i>
-								<i class="fas fa-compress-arrows-alt codepen-shrink"></i>
 								<a :href="item.link" target="_blank">
 									<i class="fas fa-external-link-square-alt"></i>
 								</a>
-								<div class="codepen-modal">
-									<div class="codepen-wrapper" v-if="item.embed">
-										<p class="codepen" data-height="250"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-										</p>
+								<div class="codepen-modal" v-if="item.embed">
+									<div class="master-codepen-wrapper">
+										<i class="fas fa-window-close codepen-close"></i>
+										<div class="codepen-wrapper" >
+											<p class="codepen" data-height="250"  data-theme-id="dark" data-default-tab="result" data-user="dannyhwangca" :data-slug-hash="item.codepenid" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+											</p>
+										</div>
 									</div>
 								</div>	
 							</div>
@@ -386,13 +388,12 @@
 			$(".codepen-expand").on("click", function(){
 				targetModal = $(this).siblings(".codepen-modal")
 				$(targetModal).fadeIn();
-				$(".project-container").addClass("project-expand");
-				$(".cp_embed_iframe").css({"height":"100vh","width":"80%","width":"80%" })
+				$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto","padding-top": "50px;" })
 			});
 
-			$(".codepen-shrink").on("click", function(){
-				$(".project-container").removeClass("project-expand");
-				$(".cp_embed_iframe ").css("height", "250")
+			$(".codepen-close").on("click", function(){
+				$(".codepen-modal").hide();
+				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto","padding-top": "50px;"})
 			});
 
 		})

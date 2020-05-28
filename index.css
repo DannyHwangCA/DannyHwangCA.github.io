@@ -466,6 +466,20 @@ a {
     background-color: rgba(0,0,0,0.9); 
 }
 
+.master-codepen-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.codepen-close {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 40px !important; 
+    animation: moon-glow 4s infinite;
+}
+
 .project-image-container img {
     width: 100%;
 }
@@ -565,11 +579,14 @@ a {
 }
 
 @keyframes moon-glow {
-    from {
-      box-shadow: 0 0 15px -10px white;
+    0% {
+      box-shadow: 0 0 15px -5px white;
     }
-    to {
-      box-shadow: 0 0 15px 10px white;
+    50% {
+      box-shadow: 0 0 15px 5px white;
+    }
+    100% {
+        box-shadow: 0 0 15px -5px white;
     }
 }
 

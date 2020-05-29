@@ -355,6 +355,11 @@ a {
 
 .outer-project-container {
     width: 100%;
+    background-image: url(images/project-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 0px;
 }
 
 .inner-project-container {
@@ -364,7 +369,7 @@ a {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 25px auto;
+    margin: 0 auto;
 }
 
 .search-input-container {

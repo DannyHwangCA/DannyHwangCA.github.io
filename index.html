@@ -118,7 +118,7 @@
 						<div class="input-container">
 							<input 
 								class="form-control search-input" 
-								placeholder="Search Project Titles & Tags"
+								placeholder="Search Project Titles & Descriptions"
 								v-model="searchTerm"
 							/>
 						</div>
@@ -392,7 +392,7 @@
 
 			$(".codepen-expand").on("click", function(){
 				targetModal = $(this).siblings(".codepen-modal");
-				$(targetModal).fadeIn();
+				$(targetModal).show();
 				$(".codepen-wrapper").css("padding-top", "50px");
 				$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto"})
 			});
@@ -402,6 +402,14 @@
 				$(".codepen-wrapper").css("padding-top", "0px");
 				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
 			});
+
+			$(document).keydown(function(e){
+				if (e.which == 27) {
+					$(".codepen-modal").hide();
+					$(".codepen-wrapper").css("padding-top", "0px");
+				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
+				}
+			})
 
 		})
 	</script>

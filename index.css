@@ -405,17 +405,17 @@ a {
 
 .project-outer-container {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .project-container {
-    width: 49%;
+    width: 33%;
     border: 1px solid #31708e;
     border-radius: 5px;
     background-color: white;
-    margin-top: 15px;
+    margin-top: 5px;
     padding: 0px 10px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;

@@ -496,6 +496,11 @@ a {
 .site-container {
     width: 100%;
     background: papayawhip;
+    padding: 50px 0px;
+}
+
+.main-site-info {
+    width: 100%;
 }
 
 .contact-container {

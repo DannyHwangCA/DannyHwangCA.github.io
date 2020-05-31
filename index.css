@@ -499,8 +499,35 @@ a {
     padding: 50px 0px;
 }
 
+.site-inner-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .main-site-info {
     width: 100%;
+}
+
+.list-site-info {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.site-info {
+    width: 48%;
+    background-color: white;
+    border: 1px solid #31708e;
+    border-radius: 5px;
+    padding: 5px 15px;
 }
 
 .contact-container {

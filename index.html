@@ -29,6 +29,11 @@
 			</a>
 		</button>
 		<button class="nav-button-container half-transition"> 
+			<a id="nav-article" class="nav-link" href="#">
+				Articles
+			</a>
+		</button>
+		<button class="nav-button-container half-transition"> 
 			<a id="nav-contact" class="nav-link" href="#">
 				Contact
 			</a>
@@ -249,6 +254,11 @@
 				
 			</div>
 
+			<a name="linkArticle"></a>
+			<div id="article-trigger" class="article-container">
+
+			</div>
+
 			<a name="linkContact"></a>
 			<div id="contact-trigger" class="contact-container">
 
@@ -292,6 +302,10 @@
 
 		$("#nav-project").click(function() {
    			scrollToAnchor('linkProject');
+		});
+
+		$("#nav-article").click(function() {
+   			scrollToAnchor('linkArticle');
 		});
 
 		$("#nav-contact").click(function() {
@@ -431,7 +445,6 @@
 				.to(".firefly-go-right-short", {left:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
 				.to(".firefly-go-left-short", {right:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
 			
-			
 			var controllerAbout = new ScrollMagic.Controller();
 			var scene = new ScrollMagic.Scene({
   				triggerElement: "#info-trigger",
@@ -446,6 +459,28 @@
 			})
 			.setTween(tAbout)
 			.addTo(controllerAbout);
+
+			tProject = gsap.timeline();
+			tProject
+				.to(".outer-project-container", {opacity: 1, duration: 0.5})
+				.to(".project-h1-container", {y: 0, opacity: 1, duration: 0.5})
+				.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
+				.to(".project-container", {opacity:1, stagger: 0.25, duration: 0.5})
+
+			var controllerProject = new ScrollMagic.Controller();
+			var scene = new ScrollMagic.Scene({
+  				triggerElement: "#project-trigger",
+  				triggerHook: 0.8,
+				reverse: false
+			})
+  			.addIndicators({
+				colorTrigger: "red",
+				colorStart: "red",
+				colorEnd: "red",
+				indent: 5
+			})
+			.setTween(tProject)
+			.addTo(controllerProject);
 
 			$(".codepen-expand").on("click", function(){
 				targetModal = $(this).siblings(".codepen-modal");

@@ -495,7 +495,7 @@ a {
 
 .site-container {
     width: 100%;
-    background: papayawhip;
+    background: #607e58;
     padding: 50px 0px;
 }
 
@@ -512,6 +512,14 @@ a {
 
 .main-site-info {
     width: 100%;
+    background: white;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+.main-site-info h2 {
+    color: white;
+    margin-top: 0px;
 }
 
 .list-site-info {
@@ -520,12 +528,12 @@ a {
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .site-info {
-    width: 48%;
+    width: 49%;
     background-color: white;
-    border: 1px solid #31708e;
     border-radius: 5px;
     padding: 5px 15px;
 }

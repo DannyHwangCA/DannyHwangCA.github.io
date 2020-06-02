@@ -605,7 +605,13 @@ a {
     padding: 15px;
 }
 
+.contact-info-title {
+    margin-top: 0px;
+}
 
+.contact-info p {
+    margin-bottom: 0px;
+}
 
 @-webkit-keyframes hvr-wobble-vertical {
     16.65% {

@@ -116,9 +116,10 @@
 			<a name="linkProject"></a>
 			<div id="project-trigger" class="outer-project-container">
 				<div id="inner-project-container" class="inner-project-container">
+					<!--
 					<div class="search-input-container">
 						<div class="project-h1-container">
-							<h1>My Projects</h1>
+							<h1>Projects</h1>
 						</div>
 						<div class="input-container">
 							<input 
@@ -128,6 +129,7 @@
 							/>
 						</div>
 					</div>
+					-->
 					<div class="project-outer-container">
 					<div class="project-container" 
 						v-for="(item, index) in project"
@@ -178,7 +180,57 @@
 						
 					</div>
 					</div>
-					<hr class="full">
+
+				</div>
+			</div>
+
+			<a name="linkArticle"></a>
+			<div id="article-trigger" class="outer-article-container">
+				<div id="inner-article-container" class="inner-article-container">
+					<div class="search-input-container">
+						<div class="article-h1-container">
+							<h1>Articles</h1>
+						</div>
+						<div class="input-container">
+							<input 
+								class="form-control search-input" 
+								placeholder="Search Project Titles & Descriptions"
+								v-model="searchTerm"
+							/>
+						</div>
+					</div>
+					<div class="project-outer-container">
+						<div class="project-container" 
+							v-for="(item, index) in project"
+							:key="index"
+						>
+							<div class="project-type-container">
+								<div :class="item.type">
+									<a :href="item.link" target="_blank">
+										<h2>{{item.type}}</h2>
+									</a>
+									<i class="fas fa-expand-arrows-alt codepen-expand"></i>
+									<a :href="item.link" target="_blank">
+										<i class="fas fa-external-link-square-alt"></i>
+									</a>
+								</div>
+							</div>
+							<div class="project-image-container">
+								<a :href="item.link" target="_blank">
+									<img :src="item.image">
+								</a>
+							</div>
+							<h2>
+								<a :href="item.link" target="_blank">{{ item.title }}</a>
+							</h2>
+							<h3>
+								{{item.title2}}
+							</h3>
+							<p>{{ item.date }}</p>
+							<p v-html="item.description"></p>
+							
+						</div>
+						</div>
 				</div>
 			</div>
 
@@ -253,11 +305,6 @@
 				</div>
 				
 				
-			</div>
-
-			<a name="linkArticle"></a>
-			<div id="article-trigger" class="article-container">
-
 			</div>
 
 			<a name="linkContact"></a>
@@ -391,7 +438,8 @@
 			.then( function(results){
 				data.project = results;
 				data.saved = results;
-			}).then( function*(){
+			})
+			.then( function*(){
 				$("#app-container").show();
 			})
 
@@ -452,6 +500,85 @@
 				}
 			} 
 		});
+
+		var articleData = {
+			project: null,
+			saved: null,
+			searchTerm: ''
+		}	
+
+		fetch("jsons/projects.json")
+			.then(res => res.json() )
+			.then( function(results){
+				articleData.project = results;
+				articleData.saved = results;
+			})
+			.then( function*(){
+				$("#app-container").show();
+			})
+
+		articleData.project = 
+		[
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			},
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			}
+		]
+
+		articleData.saved = 
+		[
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			},
+			{
+				"title":"React Customize SVG",
+				"title2": "Props, State, Event Handling",
+				"type": "Codepen",
+				"embed" : "true",
+				"codepenid": "VwLOqya",
+				"link": "https://codepen.io/dannyhwangca/full/VwLOqya",
+				"description" : "A React project that uses value from an input to pass information between states & props."
+			}
+		]
+
+		var appArticle = new Vue({
+			el: '#inner-article-container',
+			data : articleData, 
+			watch: {
+				searchTerm: function(){
+				var searching = this.searchTerm;
+				var blogArray = this.saved.filter( blog => {
+					return (
+					blog.title.toLowerCase().match(searching.toLowerCase()) ||
+					blog.description.toLowerCase().match(searching.toLowerCase()) 
+					)
+				}
+				);
+				this.project = blogArray;
+				}
+			} 
+		});
+
 
 		$(document).ready(function(){
 

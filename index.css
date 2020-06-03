@@ -576,11 +576,11 @@ a {
 }
 
 .article-container {
-    width: 24%;
+    width: 49%;
     border: 1px solid #3b5998;
     border-radius: 5px;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 

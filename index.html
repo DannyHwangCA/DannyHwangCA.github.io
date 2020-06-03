@@ -175,9 +175,7 @@
 						<h3>
 							{{item.title2}}
 						</h3>
-						<p>{{ item.date }}</p>
 						<p v-html="item.description"></p>
-						
 					</div>
 					</div>
 
@@ -194,43 +192,28 @@
 						<div class="input-container">
 							<input 
 								class="form-control search-input" 
-								placeholder="Search Project Titles & Descriptions"
+								placeholder="Search Article Title & Description"
 								v-model="searchTerm"
 							/>
 						</div>
 					</div>
-					<div class="project-outer-container">
-						<div class="project-container" 
-							v-for="(item, index) in project"
+					<div class="article-outer-container">
+						<div class="article-container" 
+							v-for="(item, index) in article"
 							:key="index"
 						>
-							<div class="project-type-container">
-								<div :class="item.type">
-									<a :href="item.link" target="_blank">
-										<h2>{{item.type}}</h2>
-									</a>
-									<i class="fas fa-expand-arrows-alt codepen-expand"></i>
-									<a :href="item.link" target="_blank">
-										<i class="fas fa-external-link-square-alt"></i>
-									</a>
+							<div class="article-title-container">
+								<h2>{{ item.title }}</h2>
+								<div class="article-expand-container">
+									Show More
+									<i class="far fa-plus-square article-open"></i>
+									<i class="far fa-minus-square article-close"></i>
 								</div>
 							</div>
-							<div class="project-image-container">
-								<a :href="item.link" target="_blank">
-									<img :src="item.image">
-								</a>
-							</div>
-							<h2>
-								<a :href="item.link" target="_blank">{{ item.title }}</a>
-							</h2>
-							<h3>
-								{{item.title2}}
-							</h3>
-							<p>{{ item.date }}</p>
 							<p v-html="item.description"></p>
 							
 						</div>
-						</div>
+					</div>
 				</div>
 			</div>
 
@@ -502,7 +485,7 @@
 		});
 
 		var articleData = {
-			project: null,
+			article: null,
 			saved: null,
 			searchTerm: ''
 		}	
@@ -510,14 +493,14 @@
 		fetch("jsons/projects.json")
 			.then(res => res.json() )
 			.then( function(results){
-				articleData.project = results;
+				articleData.article = results;
 				articleData.saved = results;
 			})
 			.then( function*(){
 				$("#app-container").show();
 			})
 
-		articleData.project = 
+		articleData.article = 
 		[
 			{
 				"title":"React Customize SVG",
@@ -574,7 +557,7 @@
 					)
 				}
 				);
-				this.project = blogArray;
+				this.article = blogArray;
 				}
 			} 
 		});

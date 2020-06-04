@@ -687,9 +687,8 @@
 				var targetMessage = $(this).parents().siblings(".article-message");
 				var targetClose = $(this).siblings(".article-close");
 				$(".article-container").fadeOut( function() {
-					$(targetContainer).fadeIn( function() {
-						$(targetMessage).slideDown();
-					});
+					$(targetContainer).fadeIn();
+					$(targetMessage).fadeIn();
 				});
 				$(this).hide();
 				$(targetClose).show();
@@ -702,7 +701,7 @@
 				$(this).hide();
 				$(".article-container").fadeIn();
 				$(targetOpen).show();
-				$(targetMessage).hide();
+				$(targetMessage).slideUp();
 			})
 
 		})

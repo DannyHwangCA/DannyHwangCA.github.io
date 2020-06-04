@@ -208,9 +208,15 @@
 							<div class="article-title-container">
 								<h3>{{ item.title }}</h3>
 								<div class="article-expand-container">
-									Learn More
-									<i class="far fa-plus-square article-open"></i>
-									<i class="far fa-minus-square article-close"></i>
+									<div class="article-open">
+										Read This Article
+										<i class="far fa-plus-square"></i>
+									</div>
+									<div class="article-close hide">
+										Close This Article
+										<i class="far fa-minus-square"></i>
+									</div>
+									
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -686,21 +692,20 @@
 				var targetContainer = $(this).parents(".article-container");
 				var targetMessage = $(this).parents().siblings(".article-message");
 				var targetClose = $(this).siblings(".article-close");
-				$(".article-container").fadeOut( function() {
-					$(targetContainer).fadeIn();
-					$(targetMessage).fadeIn();
+				$(".article-container").fadeOut("fast", function() {
+					$(targetContainer).fadeIn("fast");
+					$(targetMessage).fadeIn("fast");
+					$(targetClose).toggleClass("hide");
 				});
-				$(this).hide();
-				$(targetClose).show();
-				
+				$(this).toggleClass("hide");
 			})
 
 			$(".article-close").on("click", function() {
 				var targetMessage = $(this).parents().siblings(".article-message");
 				var targetOpen = $(this).siblings(".article-open");
-				$(this).hide();
-				$(".article-container").fadeIn();
-				$(targetOpen).show();
+				$(this).toggleClass("hide");
+				$(".article-container").fadeIn("fast");
+				$(targetOpen).toggleClass("hide");
 				$(targetMessage).slideUp();
 			})
 

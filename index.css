@@ -607,7 +607,11 @@ a {
 }
 
 .article-close {
-    display: none;
+
+}
+
+.article-open {
+
 }
 
 .article-description {
@@ -623,7 +627,7 @@ a {
 
 .contact-inner-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -838,6 +842,10 @@ a {
 
 .clear {
     clear: both;
+}
+
+.hide {
+    display: none;
 }
 
 .zero-margin {

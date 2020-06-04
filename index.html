@@ -683,17 +683,24 @@
 			})
 
 			$(".article-open").on("click", function() {
+				var targetContainer = $(this).parents(".article-container");
 				var targetMessage = $(this).parents().siblings(".article-message");
 				var targetClose = $(this).siblings(".article-close");
+				$(".article-container").fadeOut( function() {
+					$(targetContainer).fadeIn( function() {
+						$(targetMessage).slideDown();
+					});
+				});
 				$(this).hide();
 				$(targetClose).show();
-				$(targetMessage).show();
+				
 			})
 
 			$(".article-close").on("click", function() {
 				var targetMessage = $(this).parents().siblings(".article-message");
 				var targetOpen = $(this).siblings(".article-open");
 				$(this).hide();
+				$(".article-container").fadeIn();
 				$(targetOpen).show();
 				$(targetMessage).hide();
 			})

@@ -649,7 +649,6 @@
 			tProject
 				.to(".outer-project-container", {opacity: 1, duration: 0.5})
 				.to(".project-h1-container", {y: 0, opacity: 1, duration: 0.5})
-				.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
 				.to(".project-container", {opacity:1, stagger: 0.25, duration: 0.5})
 
 			var controllerProject = new ScrollMagic.Controller();
@@ -687,6 +686,28 @@
 				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
 				}
 			})
+
+			tArticle = gsap.timeline();
+			tArticle
+				.to(".outer-article-container", {opacity: 1, duration: 0.5})
+				.to(".article-h1-container", {y: 0, opacity: 1, duration: 0.5})
+				.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
+				.to(".article-container", {x: 0, opacity:1, stagger: 0.25, duration: 0.5})
+
+			var controllerArticle = new ScrollMagic.Controller();
+			var scene = new ScrollMagic.Scene({
+  				triggerElement: "#article-trigger",
+  				triggerHook: 0.8,
+				reverse: false
+			})
+  			.addIndicators({
+				colorTrigger: "red",
+				colorStart: "red",
+				colorEnd: "red",
+				indent: 5
+			})
+			.setTween(tArticle)
+			.addTo(controllerArticle);
 
 			$(".article-open").on("click", function() {
 				var targetContainer = $(this).parents(".article-container");

@@ -390,6 +390,7 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 15px;
+    padding: 0px 15px;
 }
 
 .project-container {
@@ -522,6 +523,7 @@ a {
 }
 
 .outer-article-container {
+    opacity: 0;
     width: 100%;
 }
 
@@ -545,7 +547,9 @@ a {
 }
 
 .article-h1-container {
+    opacity: 0;
     width: 100%;
+    transform: translateY(-100px);
 }
 
 .article-h1-container h1 {
@@ -576,11 +580,13 @@ a {
 }
 
 .article-container {
+    opacity: 0;
     width: 100%;
     border: 1px solid #3b5998;
     border-radius: 5px;
     padding: 15px;
     margin-top: 10px;
+    transform: translateX(-100px);
 }
 
 .article-title-container {

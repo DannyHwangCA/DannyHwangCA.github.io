@@ -206,13 +206,14 @@
 							:key="index"
 						>
 							<div class="article-title-container">
-								<h2>{{ item.title }}</h2>
+								<h3>{{ item.title }}</h3>
 								<div class="article-expand-container">
-									Show More
+									Learn More
 									<i class="far fa-plus-square article-open"></i>
 									<i class="far fa-minus-square article-close"></i>
 								</div>
 							</div>
+							<div class="clear"></div>
 							<p class="article-message" v-html="item.message"></p>
 							<p class="article-description" v-html="item.description"></p>
 						</div>
@@ -512,14 +513,16 @@
 				"message": "<h2>Component</h2><p>hello</p>"
 			},
 			{
-				"title":"React Customize SVG",
-				"description" : "A React project that uses value from an input to pass information between states & props.",
-				"message": ""
+				"title":"Angular Components",
+				"type" : "Angular",
+				"description" : "Basic Angular Knowledge",
+				"message": "<h2>Component</h2><p>hello</p>"
 			},
 			{
-				"title":"React Customize SVG",
-				"description" : "A React project that uses value from an input to pass information between states & props.",
-				"message": ""
+				"title":"Angular Components",
+				"type" : "Angular",
+				"description" : "Basic Angular Knowledge",
+				"message": "<h2>Component</h2><p>hello</p>"
 			}
 		]
 
@@ -677,6 +680,22 @@
 					$(".codepen-wrapper").css("padding-top", "0px");
 				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
 				}
+			})
+
+			$(".article-open").on("click", function() {
+				var targetMessage = $(this).parents().siblings(".article-message");
+				var targetClose = $(this).siblings(".article-close");
+				$(this).hide();
+				$(targetClose).show();
+				$(targetMessage).show();
+			})
+
+			$(".article-close").on("click", function() {
+				var targetMessage = $(this).parents().siblings(".article-message");
+				var targetOpen = $(this).siblings(".article-open");
+				$(this).hide();
+				$(targetOpen).show();
+				$(targetMessage).hide();
 			})
 
 		})

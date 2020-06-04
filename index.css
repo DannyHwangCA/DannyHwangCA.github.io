@@ -576,11 +576,42 @@ a {
 }
 
 .article-container {
-    width: 49%;
+    width: 100%;
     border: 1px solid #3b5998;
     border-radius: 5px;
     padding: 15px;
     margin-top: 10px;
+}
+
+.article-title-container {
+    width: 100%;
+    clear:both;
+}
+
+.article-title-container h3 {
+    float: left;
+    margin: 0px;
+}
+
+.article-expand-container {
+    float: right;
+    cursor: pointer;
+}
+
+.article-expand-container {
+    font-size: 20px;
+}
+
+.article-message {
+    display: none;
+}
+
+.article-close {
+    display: none;
+}
+
+.article-description {
+    margin-bottom: 0px;
 }
 
 
@@ -803,6 +834,10 @@ a {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.clear {
+    clear: both;
 }
 
 .zero-margin {

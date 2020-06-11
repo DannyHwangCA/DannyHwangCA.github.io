@@ -7,6 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+	<div class="pre-loader">
+		<div class="loader-circle loader-1"></div>
+		<div class="loader-circle loader-2"></div>
+		<div class="loader-circle loader-3"></div>
+		<div class="loader-circle loader-4"></div>
+		<div class="loader-circle loader-5"></div>
+	</div>
 	<div class="nav-container">
 		<button class="nav-button-container half-transition">
 			<a id="nav-home" class="nav-link" href="#">
@@ -556,167 +563,178 @@
 			} 
 		});
 
+		var tLoader = gsap.timeline();
+			tLoader
+				.to(".loader-circle", {y: -50, width: 50, height:50,
+				stagger: {
+    				each: 0.1,  
+    				repeat: -1, 
+					ease: "power0",
+    				yoyo: true  
+				}, duration: 1})
+		
+		$(window).on('load', function () {
 
-		$(document).ready(function(){
+			$(".pre-loader").fadeOut();
 
-			var tHome = gsap.timeline();
-			tHome
-				.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
-				.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
-				.to("#home-title", 0.5, {opacity: 1, text:"Danny Hwang"})
-				.to("#home-sub-title-1", 0.5, {opacity: 1, text:"Web Developer"})
-				.to("#home-sub-title-2", 0.5, {opacity: 1, text:"Frontend Engineer"})
-				.to("#home-sub-title-3", 0.5, {opacity: 1, text:"Passionate Coder"})
-				.to(".main-home-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
-				.to(".home-container", { duration: 0.5}, "<")
-				.to(".home-bg-container", {opacity: 1, height: "100%", duration: 0.5}, ">")
-				.to(".home-plane-object", {rotation: -10, yoyo: true, ease: "power0", repeat: -1, duration: 0.5}, ">")
-				.to(".home-plane-object", {opacity: 1, duration:2}, "<")
-				.to(".cloud", {opacity: 1, stagger: 0.25, duration:2}, "<")
-				.to(".home-plane-object", { left: "90%", duration: 4, ease: "power0", yoyo: true, repeat: -1}, "<")
-				.to("#cloud-1", { left: "80%", duration: 15, ease: "power0", yoyo: true, repeat: -1}, "<")
-				.to("#cloud-2", { top: "22%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
-				.to("#cloud-3", { top: "32%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
-				.to("#cloud-4", { left: "0%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
-				.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<");
+				var tHome = gsap.timeline();
+				tHome
+					.to(".nav-button-container", {y: 0, opacity:1, stagger: 0.1, duration: 0.1}, 0.25)
+					.to(".profile-home-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+					.to(".profile-home-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#3b5998", ease: "Back.easeInOut", duration: 1}, "<")
+					.to("#home-title", 0.5, {opacity: 1, text:"Danny Hwang"})
+					.to("#home-sub-title-1", 0.5, {opacity: 1, text:"Web Developer"})
+					.to("#home-sub-title-2", 0.5, {opacity: 1, text:"Frontend Engineer"})
+					.to("#home-sub-title-3", 0.5, {opacity: 1, text:"Passionate Coder"})
+					.to(".main-home-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#8b9dc3", color: "white",  duration: 0.5})
+					.to(".home-container", { duration: 0.5}, "<")
+					.to(".home-bg-container", {opacity: 1, height: "100%", duration: 0.5}, ">")
+					.to(".home-plane-object", {rotation: -10, yoyo: true, ease: "power0", repeat: -1, duration: 0.5}, ">")
+					.to(".home-plane-object", {opacity: 1, duration:2}, "<")
+					.to(".cloud", {opacity: 1, stagger: 0.25, duration:2}, "<")
+					.to(".home-plane-object", { left: "90%", duration: 4, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to("#cloud-1", { left: "80%", duration: 15, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to("#cloud-2", { top: "22%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to("#cloud-3", { top: "32%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to("#cloud-4", { left: "0%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<");
 
-			tNav = gsap.timeline();
-			tNav
-				.to(".nav-link", {color: "white", duration: 0.1})
-				.to(".nav-container", {backgroundColor: "#8fc1e3", duration: 0.25}, "<")
+				tNav = gsap.timeline();
+				tNav
+					.to(".nav-link", {color: "white", duration: 0.1})
+					.to(".nav-container", {backgroundColor: "#8fc1e3", duration: 0.25}, "<")
 
-			var controllerNav = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#nav-trigger",
-  				triggerHook: 0
-			})
-  			.addIndicators({
-				colorTrigger: "red",
-				colorStart: "red",
-				colorEnd: "red",
-				indent: 5
-			})
-			.setTween(tNav)
-			.addTo(controllerNav);
+				var controllerNav = new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#nav-trigger",
+					triggerHook: 0
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tNav)
+				.addTo(controllerNav);
 
-			tAbout = gsap.timeline();
-			tAbout
-				.to(".info-container", {opacity: 1, duration: 1})
-				.to(".profile-info-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
-				.to(".profile-info-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#f4f4f4", ease: "Back.easeInOut", duration: 1}, "<")
-				.to(".right-info-container", { opacity: 1, duration: 0.5}, ">")
-				.to(".right-info-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
-				.to(".left-info-container h3", { display: "block", opacity: 1, duration: 0.5},">")
-				.to(".left-info-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
-				.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#31708e", color: "white",  duration: 0.5})
-				.to(".moon-container", {opacity:1, stagger: 0.25, duration: 0.5})
-				.to(".firefly", {opacity:1, stagger: 0.25, duration: 0.5})
-				.to(".firefly-go-right-long", {left:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-left-long", {right:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-right-short", {left:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
-				.to(".firefly-go-left-short", {right:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
-			
-			var controllerAbout = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#info-trigger",
-  				triggerHook: 0.8,
-				reverse: false
-			})
-  			.addIndicators({
-				colorTrigger: "red",
-				colorStart: "red",
-				colorEnd: "red",
-				indent: 5
-			})
-			.setTween(tAbout)
-			.addTo(controllerAbout);
+				tAbout = gsap.timeline();
+				tAbout
+					.to(".info-container", {opacity: 1, duration: 1})
+					.to(".profile-info-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
+					.to(".profile-info-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#f4f4f4", ease: "Back.easeInOut", duration: 1}, "<")
+					.to(".right-info-container", { opacity: 1, duration: 0.5}, ">")
+					.to(".right-info-container p", { x: 0, opacity: 1, stagger: 0.25, duration: 0.5}, "<")
+					.to(".left-info-container h3", { display: "block", opacity: 1, duration: 0.5},">")
+					.to(".left-info-container h4", { display: "block", opacity: 1, stagger: 0.25, duration: 0.5})
+					.to(".left-info-container", {padding: "15px 25px", borderRadius: "10px", backgroundColor: "#31708e", color: "white",  duration: 0.5})
+					.to(".moon-container", {opacity:1, stagger: 0.25, duration: 0.5})
+					.to(".firefly", {opacity:1, stagger: 0.25, duration: 0.5})
+					.to(".firefly-go-right-long", {left:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
+					.to(".firefly-go-left-long", {right:"90%", duration: 20, ease: "power0", yoyo: true, repeat: -1},"<")
+					.to(".firefly-go-right-short", {left:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
+					.to(".firefly-go-left-short", {right:"90%", duration: 10, ease: "power0", yoyo: true, repeat: -1},"<")
+				
+				var controllerAbout = new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#info-trigger",
+					triggerHook: 0.8,
+					reverse: false
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tAbout)
+				.addTo(controllerAbout);
 
-			tProject = gsap.timeline();
-			tProject
-				.to(".outer-project-container", {opacity: 1, duration: 0.5})
-				.to(".project-background-dark-overlay", {opacity: 1, duration: 0.5})
-				.to(".project-h1-container", {y: 0, opacity: 1, duration: 0.5})
-				.to(".project-container", {opacity:1, stagger: 0.25, duration: 0.5})
+				tProject = gsap.timeline();
+				tProject
+					.to(".outer-project-container", {opacity: 1, duration: 0.5})
+					.to(".project-background-dark-overlay", {opacity: 1, duration: 0.5})
+					.to(".project-h1-container", {y: 0, opacity: 1, duration: 0.5})
+					.to(".project-container", {opacity:1, stagger: 0.25, duration: 0.5})
 
-			var controllerProject = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#project-trigger",
-  				triggerHook: 0.8,
-				reverse: false
-			})
-  			.addIndicators({
-				colorTrigger: "red",
-				colorStart: "red",
-				colorEnd: "red",
-				indent: 5
-			})
-			.setTween(tProject)
-			.addTo(controllerProject);
+				var controllerProject = new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#project-trigger",
+					triggerHook: 0.8,
+					reverse: false
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tProject)
+				.addTo(controllerProject);
 
-			$(".codepen-expand").on("click", function(){
-				targetModal = $(this).siblings(".codepen-modal");
-				$(targetModal).show();
-				$(".codepen-wrapper").css("padding-top", "50px");
-				$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto"})
-			});
+				$(".codepen-expand").on("click", function(){
+					targetModal = $(this).siblings(".codepen-modal");
+					$(targetModal).show();
+					$(".codepen-wrapper").css("padding-top", "50px");
+					$(".cp_embed_iframe").css({"height":"calc(100vh - 50px)","width":"100%", "margin":"0 auto"})
+				});
 
-			$(".codepen-close").on("click", function(){
-				$(".codepen-modal").hide();
-				$(".codepen-wrapper").css("padding-top", "0px");
-				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
-			});
-
-			$(document).keydown(function(e){
-				if (e.which == 27) {
+				$(".codepen-close").on("click", function(){
 					$(".codepen-modal").hide();
 					$(".codepen-wrapper").css("padding-top", "0px");
-				$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
-				}
-			})
-
-			tArticle = gsap.timeline();
-			tArticle
-				.to(".outer-article-container", {opacity: 1, duration: 0.5})
-				.to(".article-h1-container", {y: 0, opacity: 1, duration: 0.5})
-				.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
-				.to(".article-container", {x: 0, opacity:1, stagger: 0.25, duration: 0.5})
-
-			var controllerArticle = new ScrollMagic.Controller();
-			var scene = new ScrollMagic.Scene({
-  				triggerElement: "#article-trigger",
-  				triggerHook: 0.8,
-				reverse: false
-			})
-  			.addIndicators({
-				colorTrigger: "red",
-				colorStart: "red",
-				colorEnd: "red",
-				indent: 5
-			})
-			.setTween(tArticle)
-			.addTo(controllerArticle);
-
-			$(".article-open").on("click", function() {
-				var targetContainer = $(this).parents(".article-container");
-				var targetMessage = $(this).parents().siblings(".article-message");
-				var targetClose = $(this).siblings(".article-close");
-				$(".article-container").fadeOut("fast", function() {
-					$(targetContainer).fadeIn("fast");
-					$(targetMessage).fadeIn("fast");
-					$(targetClose).toggleClass("hide");
+					$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
 				});
-				$(this).toggleClass("hide");
-			})
 
-			$(".article-close").on("click", function() {
-				var targetMessage = $(this).parents().siblings(".article-message");
-				var targetOpen = $(this).siblings(".article-open");
-				$(this).toggleClass("hide");
-				$(".article-container").fadeIn("fast");
-				$(targetOpen).toggleClass("hide");
-				$(targetMessage).slideUp();
-			})
+				$(document).keydown(function(e){
+					if (e.which == 27) {
+						$(".codepen-modal").hide();
+						$(".codepen-wrapper").css("padding-top", "0px");
+					$(".cp_embed_iframe ").css({"height":"250","width":"100%","margin":"0 auto"})
+					}
+				})
+
+				tArticle = gsap.timeline();
+				tArticle
+					.to(".outer-article-container", {opacity: 1, duration: 0.5})
+					.to(".article-h1-container", {y: 0, opacity: 1, duration: 0.5})
+					.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
+					.to(".article-container", {x: 0, opacity:1, stagger: 0.25, duration: 0.5})
+
+				var controllerArticle = new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#article-trigger",
+					triggerHook: 0.8,
+					reverse: false
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tArticle)
+				.addTo(controllerArticle);
+
+				$(".article-open").on("click", function() {
+					var targetContainer = $(this).parents(".article-container");
+					var targetMessage = $(this).parents().siblings(".article-message");
+					var targetClose = $(this).siblings(".article-close");
+					$(".article-container").fadeOut("fast", function() {
+						$(targetContainer).fadeIn("fast");
+						$(targetMessage).fadeIn("fast");
+						$(targetClose).toggleClass("hide");
+					});
+					$(this).toggleClass("hide");
+				})
+
+				$(".article-close").on("click", function() {
+					var targetMessage = $(this).parents().siblings(".article-message");
+					var targetOpen = $(this).siblings(".article-open");
+					$(this).toggleClass("hide");
+					$(".article-container").fadeIn("fast");
+					$(targetOpen).toggleClass("hide");
+					$(targetMessage).slideUp();
+				})
 
 		})
 	</script>

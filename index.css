@@ -548,6 +548,20 @@ a {
     border-radius: 5px;
     outline: none;
     padding: 5px 10px;
+    color: #3b5998;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #31708e;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #31708e;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: r#31708e;
 }
 
 .article-info-container {

@@ -532,7 +532,7 @@ a {
 
 .article-h1-container h1 {
     margin: 0px;
-    color: white;
+    color: #31708e;
 }
 
 .input-container {
@@ -544,7 +544,7 @@ a {
 
 .input-container input {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #31708e;
     border-radius: 5px;
     outline: none;
     padding: 5px 10px;
@@ -577,6 +577,7 @@ a {
 .article-title-container h3 {
     float: left;
     margin: 0px;
+    color: #31708e;
 }
 
 .article-expand-container {
@@ -588,20 +589,22 @@ a {
     font-size: 20px;
 }
 
-.article-message {
-    display: none;
-}
-
 .article-close {
-
+    color: #31708e;
 }
 
 .article-open {
+    color: #31708e;
+}
 
+.article-message {
+    display: none;
+    color: #31708e;
 }
 
 .article-description {
     margin-bottom: 0px;
+    color: #31708e;
 }
 
 .site-container {

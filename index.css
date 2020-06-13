@@ -544,7 +544,7 @@ a {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 25px auto;
-    
+    padding: 0 15px;
 }
 
 .search-input-container {
@@ -707,6 +707,29 @@ a {
     background-color: white;
     border-radius: 5px;
     padding: 5px 15px;
+}
+
+.site-info h2 {
+    color: #31708e;
+    margin-bottom: 0px;
+}
+
+.site-info ul {
+    font-weight: bold;
+    color: #31708e;
+}
+
+.site-info ul li {
+    margin-top: 2px;
+}
+
+.site-info ul ul {
+    font-weight: normal;
+    color: #31708e;
+}
+
+.site-info ul ul li {
+    padding: 2px;
 }
 
 .left-site-info {

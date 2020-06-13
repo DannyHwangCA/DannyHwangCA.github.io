@@ -753,6 +753,7 @@
 					.to(".right-site-info h2", {x: 0, opacity: 1, duration: 0.5}, "<")
 					.to(".left-site-info ul li", {x: 0, opacity: 1, stagger: 0.1, duration: 0.5})
 					.to(".right-site-info ul li", {x: 0, opacity: 1, stagger: 0.1, duration: 0.5}, "<")
+				
 				var controllerSite= new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
 					triggerElement: "#site-trigger",
@@ -767,6 +768,28 @@
 				})
 				.setTween(tSite)
 				.addTo(controllerSite);
+
+				tContact = gsap.timeline();
+				tContact
+					.to(".contact-outer-container", {opacity: 1, duration: 0.5})
+					.to(".svg-container svg", {rotateY: 0, opacity: 1, stagger: 0.1, duration: 0.5})
+					.to(".svg-container h2", {rotateX: 0, opacity: 1, stagger: 0.1, duration: 0.5})
+
+				var controllerContact= new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#contact-trigger",
+					triggerHook: 0.8,
+					reverse: false
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tContact)
+				.addTo(controllerContact);
+
 
 				
 

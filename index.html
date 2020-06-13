@@ -749,7 +749,10 @@
 					.to(".main-site-info p", {y: 0, opacity: 1, duration: 0.25})
 					.to(".left-site-info", {x: 0, opacity: 1, duration: 0.5})
 					.to(".right-site-info", {x: 0, opacity: 1, duration: 0.5}, "<")
-
+					.to(".left-site-info h2", {x: 0, opacity: 1, duration: 0.5})
+					.to(".right-site-info h2", {x: 0, opacity: 1, duration: 0.5}, "<")
+					.to(".left-site-info ul li", {x: 0, opacity: 1, stagger: 0.1, duration: 0.5})
+					.to(".right-site-info ul li", {x: 0, opacity: 1, stagger: 0.1, duration: 0.5}, "<")
 				var controllerSite= new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
 					triggerElement: "#site-trigger",

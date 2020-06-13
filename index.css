@@ -737,7 +737,27 @@ a {
     transform: translateX(-100px)
 }
 
+.left-site-info h2 {
+    opacity: 0;
+    transform: translateX(-100px)
+}
+
+.left-site-info ul li {
+    opacity: 0;
+    transform: translateX(-100px)
+}
+
 .right-site-info {
+    opacity: 0;
+    transform: translateX(100px)
+}
+
+.right-site-info h2 {
+    opacity: 0;
+    transform: translateX(100px)
+}
+
+.right-site-info ul li {
     opacity: 0;
     transform: translateX(100px)
 }

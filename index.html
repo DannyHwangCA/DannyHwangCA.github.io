@@ -736,8 +736,8 @@
 					$(targetMessage).hide();
 				})
 
-				tLink = gsap.timeline();
-				tLink
+				tSite = gsap.timeline();
+				tSite
 					.to(".site-container ", {opacity: 1, duration: 0.5})
 					.to(".main-site-info", {opacity: 1, duration: 0.5})
 					.to(".main-site-info h1", {y: 0, opacity: 1, duration: 0.25})
@@ -745,9 +745,9 @@
 					.to(".left-site-info", {x: 0, opacity: 1, duration: 0.5})
 					.to(".right-site-info", {x: 0, opacity: 1, duration: 0.5}, "<")
 
-				var controllerLink= new ScrollMagic.Controller();
+				var controllerSite= new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
-					triggerElement: "#link-trigger",
+					triggerElement: "#site-trigger",
 					triggerHook: 0.8,
 					reverse: false
 				})
@@ -757,8 +757,8 @@
 					colorEnd: "red",
 					indent: 5
 				})
-				.setTween(tLink)
-				.addTo(controllerLink);
+				.setTween(tSite)
+				.addTo(controllerSite);
 
 				
 

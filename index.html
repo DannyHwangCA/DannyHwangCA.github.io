@@ -233,7 +233,7 @@
 						</p>
 					</div>
 					<div class="list-site-info">
-						<div class="site-info">
+						<div class="site-info left-site-info">
 							<h2>Language</h2>
 								<ul>
 									<li>HTML5</li>
@@ -260,7 +260,7 @@
 									<li>FontAwesome</li>
 								</ul>
 						</div>
-						<div class="site-info">
+						<div class="site-info right-site-info">
 							<h2>Library</h2>
 								<ul>
 									<li>Jquery</li>
@@ -733,8 +733,34 @@
 					$(this).toggleClass("hide");
 					$(".article-container").fadeIn("fast");
 					$(targetOpen).toggleClass("hide");
-					$(targetMessage).slideUp();
+					$(targetMessage).hide();
 				})
+
+				tLink = gsap.timeline();
+				tLink
+					.to(".site-container ", {opacity: 1, duration: 0.5})
+					.to(".main-site-info", {opacity: 1, duration: 0.5})
+					.to(".main-site-info h1", {y: 0, opacity: 1, duration: 0.25})
+					.to(".main-site-info p", {y: 0, opacity: 1, duration: 0.25})
+					.to(".left-site-info", {x: 0, opacity: 1, duration: 0.5})
+					.to(".right-site-info", {x: 0, opacity: 1, duration: 0.5}, "<")
+
+				var controllerLink= new ScrollMagic.Controller();
+				var scene = new ScrollMagic.Scene({
+					triggerElement: "#link-trigger",
+					triggerHook: 0.8,
+					reverse: false
+				})
+				.addIndicators({
+					colorTrigger: "red",
+					colorStart: "red",
+					colorEnd: "red",
+					indent: 5
+				})
+				.setTween(tLink)
+				.addTo(controllerLink);
+
+				
 
 		})
 	</script>

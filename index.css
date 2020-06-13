@@ -654,6 +654,7 @@ a {
 
 .site-container {
     width: 100%;
+    opacity: 0;
     background-image: url(images/forest.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -674,14 +675,22 @@ a {
 
 .main-site-info {
     width: 100%;
+    opacity: 0;
     background: white;
     border-radius: 5px;
     padding: 0px 15px;
 }
 
-.main-site-info h2 {
-    color: white;
-    margin-top: 0px;
+.main-site-info h1 {
+    opacity: 0;
+    color: #31708e;
+    transform: translateY(-100px);
+}
+
+.main-site-info p {
+    opacity: 0;
+    color: #31708e;
+    transform: translateY(-100px);
 }
 
 .list-site-info {
@@ -698,6 +707,16 @@ a {
     background-color: white;
     border-radius: 5px;
     padding: 5px 15px;
+}
+
+.left-site-info {
+    opacity: 0;
+    transform: translateX(-100px)
+}
+
+.right-site-info {
+    opacity: 0;
+    transform: translateX(100px)
 }
 
 .contact-outer-container {

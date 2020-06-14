@@ -388,7 +388,7 @@ a {
     position: relative;
     width: 100%;
     opacity: 0;
-    background-image: url(images/desert.png);
+    background-image: url(images/project-desert.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -405,7 +405,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     z-index: 2;
 }
 
@@ -444,16 +444,28 @@ a {
 
 .project-container {
     opacity: 0;
-    width: 33%;
-    border: 1px solid #31708e;
-    border-radius: 5px;
-    background-color: white;
+    width: 32%;
+    border-radius: 10px;
+    border: 2px solid #8d5524;
+    background-color:#c68642;
     margin-top: 5px;
     padding: 0px 10px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+
+.project-container h2 a {
+    color: white;
+}
+
+.project-container h3 {
+    color:  white;
+}
+
+.project-container p {
+    color: white;
 }
 
 .project-type-container {
@@ -486,7 +498,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #31708e;
+    background-color: #ffbf00;
     border-radius: 5px;
     margin: 15px 0px;
     padding: 5px 0;
@@ -824,9 +836,11 @@ a {
 
 .contact-info {
     width: 49%;
+    opacity: 0;
     background: white;
     border-radius: 5px;
     padding: 15px;
+    transform: scale(1.5)
 }
 
 .contact-info-title {

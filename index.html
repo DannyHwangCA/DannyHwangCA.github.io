@@ -329,7 +329,7 @@
 						</div>
 					</div>
 					<div class="contact-info-container">
-						<div class="contact-info">
+						<div class="contact-info left-contact-info">
 							
 							<h2 class="contact-info-title">Location:</h2>
 							<p>
@@ -341,8 +341,8 @@
 							</p>
 						</div>
 						
-						<div class="contact-info">
-							<h2 class="contact-info-title"> 
+						<div class="contact-info right-contact-info">
+							<h2 class="contact-info-title "> 
 								Contact 
 							</h2>
 							<p>
@@ -774,7 +774,8 @@
 					.to(".contact-outer-container", {opacity: 1, duration: 0.5})
 					.to(".svg-container svg", {rotateY: 0, opacity: 1, stagger: 0.1, duration: 0.5})
 					.to(".svg-container h2", {rotateX: 0, opacity: 1, stagger: 0.1, duration: 0.5})
-
+					.to(".contact-info", {scale: 1, opacity: 1, stagger: 0.1, duration: 0.5})
+					
 				var controllerContact= new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({
 					triggerElement: "#contact-trigger",

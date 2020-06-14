@@ -359,16 +359,22 @@
 								Links
 							</h2>
 							<p>
-								<b>Linkedin:</b> <a href="">https://www.linkedin.com/in/dannyhwangca/</a>
+								<b>Linkedin:</b> <a href="https://www.linkedin.com/in/dannyhwangca/">https://www.linkedin.com/in/dannyhwangca/</a>
 							</p>
 							<p>
-								<b>Codepen:</b> <a href="">https://codepen.io/dannyhwangca</a>
+								<b>Codepen:</b> <a href="https://codepen.io/dannyhwangca">https://codepen.io/dannyhwangca</a>
 							</p>
 							<p>
-								<b>Github:</b> <a href="">https://www.linkedin.com/in/dannyhwangca/</a>
+								<b>Github:</b> <a href="https://www.linkedin.com/in/dannyhwangca/">https://www.linkedin.com/in/dannyhwangca/</a>
 							</p>
 							<p>
 								<b>Resume:</b> <a href="">Download Here</a>
+							</p>
+							<h2 class="contact-info-title" style="margin-top: 15px;">
+								Work
+							</h2>
+							<p>
+								<b>Equilar</b> <a href="https://www.equilar.com/">https://www.equilar.com/</a>
 							</p>
 						</div>
 					</div>
@@ -780,7 +786,8 @@
 					.to(".svg-container h2", {rotateX: 0, opacity: 1, stagger: 0.1, duration: 0.5})
 					.to(".contact-info", {scale: 1, opacity: 1, duration: 0.5})
 					.to(".contact-info-title", {scale: 1, opacity: 1, duration: 0.5})
-					.to(".contact-info p", {scale: 1, opacity: 1, stagger: 0.1, duration: 0.5})
+					.to(".left-contact-info p", {scale: 1, opacity: 1, stagger: 0.1, duration: 0.5})
+					.to(".right-contact-info p", {scale: 1, opacity: 1, stagger: 0.1, duration: 0.5}, "<")
 					
 				var controllerContact= new ScrollMagic.Controller();
 				var scene = new ScrollMagic.Scene({

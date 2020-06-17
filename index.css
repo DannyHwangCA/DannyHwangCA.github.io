@@ -586,12 +586,13 @@ a {
     opacity: 0;
     width: 100%;
     transform: translateY(-100px);
+    text-align: center;
     z-index: 10;
 }
 
 .article-h1-container h1 {
     margin: 0px;
-    color: 	#be29ec;
+    color: 	#aa6f73;
 }
 
 .input-container {
@@ -604,24 +605,24 @@ a {
 
 .input-container input {
     width: 100%;
-    border: 1px solid #be29ec;
+    border: 1px solid #aa6f73;
     border-radius: 5px;
     outline: none;
     padding: 5px 10px;
-    color: #be29ec;
+    color: #aa6f73;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #be29ec;
+    color: #aa6f73;
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #be29ec;
+    color: #aa6f73;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: r#be29ec;
+    color: r#aa6f73;
 }
 
 .article-info-container {
@@ -636,7 +637,7 @@ a {
 .article-container {
     opacity: 0;
     width: 49%;
-    background-color: #be29ec;
+    background-color: #aa6f73;
     border-radius: 5px;
     padding: 15px;
     margin-top: 10px;
@@ -702,23 +703,27 @@ a {
     padding: 0 15px;
 }
 
+.site-h1-title {
+    color:white;
+}
+
 .main-site-info {
     width: 100%;
     opacity: 0;
-    background: white;
+    background: #be29ec;
     border-radius: 5px;
     padding: 0px 15px;
 }
 
 .main-site-info h1 {
     opacity: 0;
-    color: #31708e;
+    color: white;
     transform: translateY(-100px);
 }
 
 .main-site-info p {
     opacity: 0;
-    color: #31708e;
+    color: white;
     transform: translateY(-100px);
 }
 
@@ -733,19 +738,19 @@ a {
 
 .site-info {
     width: 49%;
-    background-color: white;
+    background-color: #be29ec;
     border-radius: 5px;
     padding: 5px 15px;
 }
 
 .site-info h2 {
-    color: #31708e;
+    color: white;
     margin-bottom: 0px;
 }
 
 .site-info ul {
     font-weight: bold;
-    color: #31708e;
+    color: white;
 }
 
 .site-info ul li {
@@ -754,7 +759,7 @@ a {
 
 .site-info ul ul {
     font-weight: normal;
-    color: #31708e;
+    color: white;
 }
 
 .site-info ul ul li {

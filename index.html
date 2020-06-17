@@ -738,8 +738,10 @@
 						$(targetContainer).fadeIn("fast");
 						$(targetMessage).fadeIn("fast");
 						$(targetClose).toggleClass("hide");
+						$(".article-container").css("width", "100%");
 					});
 					$(this).toggleClass("hide");
+					
 				})
 
 				$(".article-close").on("click", function() {
@@ -749,6 +751,7 @@
 					$(".article-container").fadeIn("fast");
 					$(targetOpen).toggleClass("hide");
 					$(targetMessage).hide();
+					$(".article-container").css("width", "49%");
 				})
 
 				tSite = gsap.timeline();

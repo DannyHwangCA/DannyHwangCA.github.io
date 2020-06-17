@@ -575,7 +575,7 @@ a {
 
 .article-h1-container h1 {
     margin: 0px;
-    color: #31708e;
+    color: #be29ec;
 }
 
 .input-container {
@@ -587,24 +587,24 @@ a {
 
 .input-container input {
     width: 100%;
-    border: 1px solid #31708e;
+    border: 1px solid #be29ec;
     border-radius: 5px;
     outline: none;
     padding: 5px 10px;
-    color: #3b5998;
+    color: #be29ec;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #31708e;
+    color: #be29ec;
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #31708e;
+    color: #be29ec;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: r#31708e;
+    color: r#be29ec;
 }
 
 .article-info-container {
@@ -617,13 +617,12 @@ a {
 
 .article-container {
     opacity: 0;
-    width: 100%;
-    border: 1px solid #3b5998;
+    width: 49%;
+    background-color: #be29ec;
     border-radius: 5px;
     padding: 15px;
     margin-top: 10px;
     transform: translateX(-100px);
-    background-color: white;
 }
 
 .article-title-container {
@@ -634,7 +633,7 @@ a {
 .article-title-container h3 {
     float: left;
     margin: 0px;
-    color: #31708e;
+    color: white;
 }
 
 .article-expand-container {
@@ -647,21 +646,21 @@ a {
 }
 
 .article-close {
-    color: #31708e;
+    color: white;
 }
 
 .article-open {
-    color: #31708e;
+    color: white;
 }
 
 .article-message {
     display: none;
-    color: #31708e;
+    color: white;
 }
 
 .article-description {
     margin-bottom: 0px;
-    color: #31708e;
+    color: white;
 }
 
 .site-container {

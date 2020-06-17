@@ -428,7 +428,7 @@ a {
 }
 
 .project-h1-container h1 {
-    color: white;
+    color: #8d5524;
     text-align: center;
     margin: 0px;
 }
@@ -446,7 +446,6 @@ a {
     opacity: 0;
     width: 32%;
     border-radius: 10px;
-    border: 2px solid #8d5524;
     background-color:#c68642;
     margin-top: 5px;
     padding: 0px 10px;
@@ -546,6 +545,21 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.article-background-dark-overlay {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
 }
 
 .inner-article-container {
@@ -557,6 +571,7 @@ a {
     flex-wrap: wrap;
     margin: 25px auto;
     padding: 0 15px;
+    z-index: 10;
 }
 
 .search-input-container {
@@ -571,11 +586,12 @@ a {
     opacity: 0;
     width: 100%;
     transform: translateY(-100px);
+    z-index: 10;
 }
 
 .article-h1-container h1 {
     margin: 0px;
-    color: #be29ec;
+    color: 	#be29ec;
 }
 
 .input-container {
@@ -583,6 +599,7 @@ a {
     width: 100%;
     margin-top: 15px;
     transform: translateY(-100px);
+    z-index: 10;
 }
 
 .input-container input {
@@ -611,8 +628,9 @@ a {
     width: 100%;
     display: flex;
     align-items: stretch;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 10;
 }
 
 .article-container {

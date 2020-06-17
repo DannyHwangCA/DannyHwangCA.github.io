@@ -122,7 +122,6 @@
 
 			<a name="linkProject"></a>
 			<div id="project-trigger" class="outer-project-container">
-				<div class="project-background-dark-overlay"></div>
 				<div id="inner-project-container" class="inner-project-container">
 					<div class="project-h1-container">
 						<h1>Projects</h1>
@@ -711,6 +710,7 @@
 				tArticle = gsap.timeline();
 				tArticle
 					.to(".outer-article-container", {opacity: 1, duration: 0.5})
+					.to(".article-background-dark-overlay", {opacity: 1, duration: 0.5})
 					.to(".article-h1-container", {y: 0, opacity: 1, duration: 0.5})
 					.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
 					.to(".article-container", {x: 0, opacity:1, stagger: 0.25, duration: 0.5})

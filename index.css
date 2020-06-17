@@ -8,8 +8,13 @@ body {
 }
 
 a {
+    color: #ffcf40;
     outline: none;
     text-decoration: none;
+}
+
+a:hover {
+    color: 	#ffbf00;
 }
 
 .general-link {
@@ -830,7 +835,10 @@ a {
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .svg-container svg {
@@ -840,12 +848,27 @@ a {
     transform: rotateY(180deg);
 }
 
+.svg-inner-container {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.svg-inner-container:hover svg {
+    color: #ffcf40;
+}
+
 .svg-container h2 {
     opacity: 0;
     color: white;
     text-align: center;
     transform: rotateX(180deg);
+    margin: 5px 0px 0px 0px;
 }
+
+.svg-inner-container:hover h2 {
+    color:#ffcf40;
+}
+
 
 .contact-info-container {
     width: 100%;
@@ -859,7 +882,7 @@ a {
 .contact-info {
     width: 49%;
     opacity: 0;
-    background: white;
+    background: #31708e;
     border-radius: 5px;
     padding: 15px;
     transform: scale(0.5)
@@ -867,12 +890,14 @@ a {
 
 .contact-info-title {
     opacity: 0;
+    color: white;
     margin-top: 0px;
     transform: scale(1.25);
 }
 
 .contact-info p {
     opacity: 0;
+    color: white;
     margin-bottom: 0px;
     transform: scale(1.5);
 }

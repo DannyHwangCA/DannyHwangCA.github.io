@@ -1070,3 +1070,7 @@ a:hover {
 .zero-margin {
     margin: 0px;
 }
+
+.standard-vh {
+    min-height: 100vh
+}

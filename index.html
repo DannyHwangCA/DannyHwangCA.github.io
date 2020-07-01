@@ -69,7 +69,15 @@
 					<h4 id="home-sub-title-2"></h4>
 					<h4 id="home-sub-title-3"></h4>
 				</div>
+				<div class="arrow-down-outer-container">
+					<div class="arrow-down-container">
+						<i class="fas fa-arrow-down"></i>
+						<i class="fas fa-arrow-down"></i>
+						<i class="fas fa-arrow-down"></i>
+					</div>	
+				</div>
 			</div>
+
 			<a name="linkInfo"></a>
 			<div id="info-trigger" class="info-container">
 				<div class="firefly small-firefly firefly-go-right-long firefly-1"></div>
@@ -617,7 +625,8 @@
 					.to("#cloud-2", { top: "22%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
 					.to("#cloud-3", { top: "32%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
 					.to("#cloud-4", { left: "0%", duration: 10, ease: "power0", yoyo: true, repeat: -1}, "<")
-					.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<");
+					.to("#cloud-5", { top: "1%", duration: 0.5, ease: "power0", yoyo: true, repeat: -1}, "<")
+					.to(".arrow-down-container svg", {opacity: 1, y: 0, stagger: {each: 0.25, ease: "power0", yoyo: true, repeat: -1 }, duration: 0.75}, "<")
 
 				tNav = gsap.timeline();
 				tNav
@@ -640,6 +649,7 @@
 
 				tAbout = gsap.timeline();
 				tAbout
+					.to(".arrow-down-outer-container", {opacity: 0, duration: 0.5})
 					.to(".info-container", {opacity: 1, duration: 1})
 					.to(".profile-info-image-container", {y: 0, opacity: 1, duration: 0.5}, "<")
 					.to(".profile-info-image-container img", {y: 0, opacity: 1, borderWidth: 10, borderColor: "#f4f4f4", ease: "Back.easeInOut", duration: 1}, "<")
@@ -673,7 +683,6 @@
 				tProject = gsap.timeline();
 				tProject
 					.to(".outer-project-container", {opacity: 1, duration: 0.5})
-					.to(".project-background-dark-overlay", {opacity: 1, duration: 0.5})
 					.to(".project-h1-container", {y: 0, opacity: 1, duration: 0.5})
 					.to(".project-container", {opacity:1, stagger: 0.25, duration: 0.5})
 
@@ -716,7 +725,6 @@
 				tArticle = gsap.timeline();
 				tArticle
 					.to(".outer-article-container", {opacity: 1, duration: 0.5})
-					.to(".article-background-dark-overlay", {opacity: 1, duration: 0.5})
 					.to(".article-h1-container", {y: 0, opacity: 1, duration: 0.5})
 					.to(".input-container", {y: 0, opacity: 1, duration: 0.5})
 					.to(".article-container", {x: 0, opacity:1, stagger: 0.25, duration: 0.5})

@@ -201,6 +201,23 @@ a:hover {
     z-index: -90;
 }
 
+.arrow-down-outer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 10px;
+}
+
+.arrow-down-container svg {
+    opacity: 0;
+    color: 	#31708e;
+    font-size: 35px;
+    transform: translateY(-25px);
+}
+
 .profile-home-image-container {
     width: 100%;
     text-align: center;
